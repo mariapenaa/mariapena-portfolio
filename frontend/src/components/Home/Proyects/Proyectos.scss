@@ -1,0 +1,50 @@
+.proyect-container {
+    min-height:88vh;
+}
+
+.heading-1 {
+    color:white;
+    font-size:3rem;
+    text-transform: capitalize;
+}
+
+.proyect-carrousel {
+    display:flex;
+    flex-direction:row;
+    overflow-x: scroll;
+    width:100%;
+}
+
+.square {
+    margin:0px 30px;
+    width: 500px;
+    height: 400px;
+    margin:0px;
+    background-color:rgba(196, 196, 196, 1);
+}
+
+.proyect-title {
+    color:white;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 35px;
+    margin-bottom: 0px;
+}
+
+.proyect-subtitle {
+    @extend .proyect-title;
+    font-size:22px;
+}
+
+.proyect-text {
+    @extend .proyect-title;
+    font-size:22px;
+    line-height:25.78px;
+    text-align:justify;
+}
+
+.proyect-info {
+    margin:10px;
+}

@@ -1,0 +1,90 @@
+.body {
+    background-image: url(./images/wallpaper.jpg);
+    min-height:100vh;
+    position:relative;
+    width:100%;
+    background-size: cover;
+    background-repeat:repeat-y;
+    background-attachment:fixed;
+}
+
+.languageScreen {
+    width:100%;
+    height:100%;
+    background-image: url(./images/wallpaper.jpg);
+    position:relative;
+    background-size: cover;
+    background-repeat:repeat-y;
+    background-attachment:fixed;
+}
+
+.black-layer {
+    background-color:rgba(24, 24, 24, 0.9);
+    z-index:5;
+    min-height:100vh;
+    width:100%;
+}
+
+.languageContainer {
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    height:100vh;
+    width:100%;
+}
+
+.flagContainer {
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content: center;
+    margin:1rem 2.5rem;
+    p {
+        margin-top:1rem;
+        font-size:2rem;
+        color:white;
+        font-family: 'Roboto';
+    }
+}
+
+.flagContainer:hover {
+    .flag {
+        transform:scale(1.1)
+    }
+    p {
+        text-decoration: underline;
+    }
+}
+
+.flag {
+    border-radius:50%;
+    transition:all 200ms ease-in;
+    width:150px;
+    height:150px;
+    object-fit:cover;
+    cursor:pointer;
+}
+
+html{scroll-behavior:smooth}
+
+@media only screen and(max-width:700px){
+    .languageContainer {
+        display:flex;
+        justify-content: center;
+        align-items:center;
+        flex-direction:column;
+        height:100vh;
+        width:100%;
+    }
+
+    .flag {
+        width:100px;
+        height:100px;
+    }
+
+    .flagContainer {
+        p {
+            font-size:1.5rem;
+        }
+    }
+}

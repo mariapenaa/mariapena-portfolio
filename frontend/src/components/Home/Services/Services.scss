@@ -1,0 +1,40 @@
+.service-square {
+    background-color:white;
+    min-height:30vh;
+    width:40%;
+    border-radius:20px;
+    margin:20px 20px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items: center;
+    transition:all 400ms;
+}
+
+.service-square:hover {
+    transform: scale(1.06);
+}
+
+.service-container {
+    height:88vh;
+} 
+
+.service-title {
+    font-size:2rem;
+    text-transform: capitalize;
+    color:black;
+    font-family:'Roboto';
+}
+
+.service-text {
+    font-size:1.2rem;
+    text-transform: initial;
+}
+
+.icon-container {
+    height:40%;
+}
+
+.service-icon {
+    font-size:8rem;
+}

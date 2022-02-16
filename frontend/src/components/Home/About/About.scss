@@ -1,0 +1,74 @@
+.about-container {
+    ul {
+        list-style: none;
+        .about-list::before {
+            content: "\2022";
+            font-weight: bold;
+            color:white;
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+    }
+}
+
+.text-container {
+    width:50%;
+}
+
+.img-container {
+    width:50%;
+    display:flex;
+
+    flex-direction:column;
+    align-items: flex-end;
+}
+
+.about-subContainer {
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+}
+
+.about-list {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 29px;
+    color:white;
+    list-style: circle;
+}
+
+.line-hr {
+    border-top: 1px solid white;
+}
+
+.img-square {
+    background-color:rgba(196, 196, 196, 1);
+    width:80%;
+    height:50vh;
+    margin:0px;
+}
+
+.icon-container {
+    display:flex;
+    flex-direction:row;
+    justify-content: center;
+    width:80%;
+    margin-top:20px;
+    span {
+        background-color:white;
+        border-radius: 50%;
+        margin:10px;
+        height:50px;
+    }
+}
+
+.social-icons {
+    color:black;
+    font-size:50px;
+    padding:15px;
+
+}
