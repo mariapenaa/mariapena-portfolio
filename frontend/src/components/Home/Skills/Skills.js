@@ -10,9 +10,7 @@ import nodeLogo from './../../../images/node.png';
 import reactLogo from './../../../images/reactjs.png';
 import reactWhite from './../../../images/reactWhite.png';
 import sqlLogo from './../../../images/SQL.png';
-import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { getThemeProps } from '@material-ui/styles';
 
 const Skills = (props) => {
     return(

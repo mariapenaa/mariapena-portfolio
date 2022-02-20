@@ -1,7 +1,5 @@
 
-import React, {useState, useEffect} from 'react';
-
-import {text} from './text'
+import React, {useState} from 'react';
 import Header from './components/Header/Header';
 import Home from './components/Home/Home';
 import './App.scss'
@@ -9,7 +7,6 @@ import argentina from './images/flags/argentina.png'
 import usa from './images/flags/usa.png'
 
 function App() {
-  const [data, setData] = useState({})
   const [language, setLanguage] = useState('english')
   const [display, setDisplay] = useState(false)
   
@@ -22,12 +19,12 @@ function App() {
     <React.Fragment>
       {display ?
         <div className="body">
-          {data && 
+     
             <div className="black-layer">
               <Header id="top" />
               <Home language={language}/>
             </div>
-          }
+
         </div> :
         <div className="languageScreen">
           <div className="black-layer">

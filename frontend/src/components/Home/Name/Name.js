@@ -2,10 +2,8 @@
 import React from 'react';
 import './Name.scss'
 import { FaChevronDown } from 'react-icons/fa';
-import Button from '@material-ui/core/Button';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { getThemeProps } from '@material-ui/styles';
 
 
 const Name = (props) => {

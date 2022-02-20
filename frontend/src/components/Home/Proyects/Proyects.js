@@ -104,7 +104,6 @@ const Proyects = (props) => {
         },
 
     }
-    console.log(videos[text.arr[0].key].desktop1)
     return(
         <div className="proyect-container my-5">
             <p className="heading-1"
@@ -117,7 +116,7 @@ const Proyects = (props) => {
             data-aos-once="false">{text.title}</p>
             <div className="proyect-carrousel">
                 {text.arr.map( (e, idx) => 
-                    <div className={(idx % 2) == 1 ? "proyect-info proyectInfoInvert" : " proyect-info proyectInfoNormal"}
+                    <div key={idx} className={(idx % 2) === 1 ? "proyect-info proyectInfoInvert" : " proyect-info proyectInfoNormal"}
                     data-aos={(idx %2)===1 ? "fade-right" : "fade-left"}
                     data-aos-offset="200"
                     data-aos-delay="50"
@@ -142,8 +141,8 @@ const Proyects = (props) => {
                             <p className="proyect-subtitle mb-3">{e.tools}</p>
                             <p className="proyect-text"> {e.description}</p>
                             <div className="proyect-buttonContainer">
-                                {e.key != 'makeup' && <a target="_blank" href={videos[e.key].live} ><LinkIcon style={{marginBottom:'0.2rem'}} /> Live site</a>}
-                                <a target="_blank" href={videos[e.key].github} ><FaGithub style={{marginBottom:'0.2rem'}} /> Repo</a>
+                                {e.key !== 'makeup' && <a rel="noreferrer" target="_blank" href={videos[e.key].live} ><LinkIcon style={{marginBottom:'0.2rem'}} /> Live site</a>}
+                                <a rel="noreferrer" target="_blank" href={videos[e.key].github} ><FaGithub style={{marginBottom:'0.2rem'}} /> Repo</a>
                             </div>
                         </div>
                     </div>

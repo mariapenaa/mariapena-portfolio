@@ -3,7 +3,6 @@ import React from 'react';
 import './Feedback.scss';
 import { FaArrowLeft } from 'react-icons/fa';
 import { FaArrowRight } from 'react-icons/fa';
-import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 const Feedback = () => {

@@ -1,4 +1,4 @@
-import {text} from '../../text'
+
 import React , { useState , useEffect} from 'react';
 import './Header.scss'
 import Logo from '../../shared/Logo/Logo'
@@ -7,11 +7,6 @@ import LinearProgress from '@material-ui/core/LinearProgress';
 const Header = () => {
     const [progress, setProgress] = useState(0);
     const [scrolling, setScrolling] = useState('header1');
-    const [data, setData] = useState({})
-    const [language, setLanguage] = useState('english')
-
-
-    let className = "header";
     const scrollTrigger = 500;
 
     useEffect(() => {
@@ -57,13 +52,6 @@ const Header = () => {
         </React.Fragment>
         
     )
-}
-
-const style = {
-    list: {
-        color:'red',
-        fontSize:3,
-    }
 }
 
 export default Header; 

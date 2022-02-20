@@ -3,7 +3,6 @@ import './Home.scss'
 import Name from './Name/Name'
 import About from './About/About'
 import Contact from './Contact/Contact'
-import Feedback from './Feedback/Feedback'
 import Services from './Services/Services'
 import Skills from './Skills/Skills'
 import Proyects from './Proyects/Proyects'
@@ -14,14 +13,13 @@ const Home = (props) => {
     const [data, setData] = useState(text[0])
     
     useEffect(() => {
-        console.log(props.language)
         let object = text.find(e=>e.language === props.language)
         setData(object)
     }, [props.language])
 
     return(
         <React.Fragment>
-            {data != {} &&
+            {data !== {} &&
                 <div style={style.padding}>
                     <Name text={data.name}/>
                     <Proyects text={data.projects}/>

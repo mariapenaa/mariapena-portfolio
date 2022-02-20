@@ -3,22 +3,15 @@ import React, {useState} from 'react';
 import axios from 'axios'
 import './Contact.scss'
 import { FaLinkedinIn } from 'react-icons/fa';
-import {SiUpwork, SiWhitesource} from 'react-icons/si'
+import {SiUpwork} from 'react-icons/si'
 import {SiFrontendmentor} from 'react-icons/si'
 import { FaGithub } from 'react-icons/fa';
 import CircularProgress from '@material-ui/core/CircularProgress';
-import { FaEnvelope } from 'react-icons/fa';
 import TextField from '@material-ui/core/TextField';
-import AOS from 'aos';
 import 'aos/dist/aos.css';
 import {
-    createStyles,
-    fade,
-    Theme,
-    withStyles,
     makeStyles,
-    createMuiTheme,
-    withThemeCreator,
+
 } from '@material-ui/styles';
 import Button from '@material-ui/core/Button';
 import Snackbar from '@material-ui/core/Snackbar';
@@ -58,9 +51,9 @@ const useStyles = makeStyles({
             border: 'none',
             color:'white',
         },
-        '&.MuiInputLabel-shrink': {
+ /*        '&.MuiInputLabel-shrink': {
             transform:'translate (1px, 1px) scale(0.75)'
-            },
+            }, */
         '&.MuiInputLabel-shrink':{
                 transform:'translate(4px, -30px) scale(1.3)',
             }
@@ -165,7 +158,7 @@ const Contact = (props) => {
    
     }
 
-    const toggleError = () => {
+/*     const toggleError = () => {
         let objectArr = [
             {propName:'name', prop:name},
             {propName:'email', prop:email},
@@ -191,7 +184,7 @@ const Contact = (props) => {
         return errorObject
 
 
-    }
+    } */
 
     const resetFields = () => {
         setName('')
@@ -296,10 +289,10 @@ const Contact = (props) => {
                     <p className="proyect-text mt-5" style={{fontSize:'1.5rem'}}>mariapena@gmail.com</p>
                     <p className="proyect-text mt-3" style={{textAlign:'left', fontSize:'1.5rem'}}>+54 9 11 4176-6805</p>
                     <div className="icon-container mt-5">
-                            <span><a target="_blank" href="https://www.linkedin.com/in/maria-pe%C3%B1a-721b531a3/"><FaLinkedinIn className="social-icons"/></a></span>
-                            <span><a target="_blank" href="https://github.com/mariapenaa"><FaGithub className="social-icons"/></a></span>
-                            <span><a target="_blank" href="https://www.frontendmentor.io/profile/mariapenaa"><SiFrontendmentor className="social-icons"/></a></span>
-                            <span><a target="_blank" href="https://www.upwork.com/freelancers/mariapenadev"><SiUpwork className="social-icons"/></a></span>
+                            <span><a rel="noreferrer" target="_blank" href="https://www.linkedin.com/in/maria-pe%C3%B1a-721b531a3/"><FaLinkedinIn className="social-icons"/></a></span>
+                            <span><a rel="noreferrer" target="_blank" href="https://github.com/mariapenaa"><FaGithub className="social-icons"/></a></span>
+                            <span><a rel="noreferrer" target="_blank" href="https://www.frontendmentor.io/profile/mariapenaa"><SiFrontendmentor className="social-icons"/></a></span>
+                            <span><a rel="noreferrer" target="_blank" href="https://www.upwork.com/freelancers/mariapenadev"><SiUpwork className="social-icons"/></a></span>
                     </div>
                 </div>
             </div>

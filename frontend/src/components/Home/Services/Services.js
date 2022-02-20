@@ -1,9 +1,6 @@
 import React from 'react';
 import './Services.scss'
 import { FaDesktop } from 'react-icons/fa';
-import { FaCode } from 'react-icons/fa';
-import { FaMobileAlt } from 'react-icons/fa';
-import AOS from 'aos';
 import 'aos/dist/aos.css';
 import DevicesIcon from '@material-ui/icons/Devices';
 import CodeIcon from '@material-ui/icons/Code';
@@ -49,8 +46,8 @@ const Services = (props) => {
             data-aos-mirror="false"
             data-aos-once="false">
                 <div className="row justify-content-around d-flex ">
-                    {text.arr.map(e=>(
-                        <div className=" service-square">
+                    {text.arr.map((e, idx)=>(
+                        <div key={idx} className=" service-square">
                             <div className="icon-container">
                                 {iconRender(e.key)}
                             </div>
