@@ -1,7 +1,7 @@
-import {text} from 'text'
+import {text} from '../../text'
 import React , { useState , useEffect} from 'react';
 import './Header.scss'
-import Logo from 'shared/Logo/Logo'
+import Logo from '../../shared/Logo/Logo'
 import LinearProgress from '@material-ui/core/LinearProgress';
 
 const Header = () => {

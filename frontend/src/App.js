@@ -1,11 +1,12 @@
 
 import React, {useState, useEffect} from 'react';
-import {text} from 'text'
+
+import {text} from './text'
 import Header from './components/Header/Header';
 import Home from './components/Home/Home';
 import './App.scss'
-import argentina from 'images/flags/argentina.png'
-import usa from 'images/flags/usa.png'
+import argentina from './images/flags/argentina.png'
+import usa from './images/flags/usa.png'
 
 function App() {
   const [data, setData] = useState({})

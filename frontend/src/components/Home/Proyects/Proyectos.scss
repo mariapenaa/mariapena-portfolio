@@ -1,6 +1,4 @@
-.proyect-container {
-    min-height:88vh;
-}
+
 
 .heading-1 {
     color:white;
@@ -10,41 +8,156 @@
 
 .proyect-carrousel {
     display:flex;
-    flex-direction:row;
-    overflow-x: scroll;
+    flex-direction:column;
     width:100%;
 }
 
 .square {
-    margin:0px 30px;
-    width: 500px;
-    height: 400px;
-    margin:0px;
-    background-color:rgba(196, 196, 196, 1);
+    width: 550px;
+    height: 350px;
+    border-radius:20px;
+    
+    position:relative;
+}
+
+.mobileVideo {
+    position:absolute;
+    left: 48%;
+    top: 27%;
+    
+}
+
+.desktopVideo {
+    position:absolute;
+    width:100%;
+    right:5%;
+    top:5%;
 }
 
 .proyect-title {
     color:white;
     font-family: 'Roboto';
     font-style: normal;
-    font-weight: normal;
-    font-size: 30px;
+    font-weight: bold;
+    font-size: 2.2rem;
     line-height: 35px;
     margin-bottom: 0px;
 }
 
 .proyect-subtitle {
     @extend .proyect-title;
-    font-size:22px;
+    font-size:1.2rem;
+    font-weight:normal;
+    color:#808080;
 }
 
 .proyect-text {
     @extend .proyect-title;
     font-size:22px;
-    line-height:25.78px;
+    font-weight:300;
+    line-height:32.78px;
     text-align:justify;
 }
 
 .proyect-info {
     margin:10px;
+    background-color:#0000008f;
+    padding:5rem 7rem;
+    border-radius:20px;
+    align-items:center;
+    display:flex;
+    justify-content:space-between
 }
+
+.proyectInfoInvert {
+    flex-direction:row-reverse;
+}
+
+.proyectInfoNormal {
+    flex-direction:row;
+}
+
+.proyect-textContainer {
+    width:50%;
+    padding-right:3rem;
+}
+
+.proyect-buttonContainer {
+    margin-top:2rem;
+    a {
+        margin-right: 2rem;
+        text-decoration:none;
+        color:black;
+        border:none;
+        border-radius:50px;
+        padding:1rem 2rem;
+        background-color:rgb(206, 206, 206);
+        transition:all ease-in 200ms;
+    }
+    a:hover {
+        transform:scale(1.1);
+        background-color:rgb(153, 153, 153);
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .proyectInfoInvert, .proyectInfoNormal {
+        flex-direction:column;
+    }
+
+    .proyect-info {
+        padding:2rem 1.6rem;
+    }
+
+    .proyect-textContainer {
+        width: 100%;
+        padding:0;
+    }
+
+    .proyect-buttonContainer {
+        display:flex;
+        flex-direction:column;
+        a {
+            width:100%;
+            text-align:center;
+            margin:0.8rem 0rem;
+        }
+    }
+
+    .proyect-title {
+        font-size:1.7rem;
+    }
+
+    .proyect-subtitle {
+        font-size:1.2rem;
+        line-height:25px;
+        margin-top:1rem;
+    }
+
+    .proyect-text {
+        font-size:1rem;
+        line-height:22px;
+    }
+
+    .desktopVideo {
+        width: 94%;
+        right: 7%;
+    }
+
+    .mobileVideo {
+        width: 35%;
+        left: 69%;
+        top: 22%;
+    }
+
+    .square {
+        height:310px;
+        width:100%;
+    }
+
+    .heading-1 {
+        font-size:2.3rem;
+    }
+}
+
+

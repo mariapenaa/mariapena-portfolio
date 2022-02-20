@@ -8,7 +8,7 @@ import Services from './Services/Services'
 import Skills from './Skills/Skills'
 import Proyects from './Proyects/Proyects'
 import React, {useState, useEffect} from 'react';
-import {text} from 'text'
+import {text} from '../../text'
 
 const Home = (props) => {
     const [data, setData] = useState(text[0])
@@ -38,8 +38,8 @@ const Home = (props) => {
 
 const style = {
     padding: {
-        paddingLeft:'8vw',
-        paddingRight:'8vw',
+        paddingLeft:'5vw',
+        paddingRight:'5vw',
     }
 }
 

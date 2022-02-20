@@ -3,7 +3,7 @@
 }
 
 .graph {
-    height:70vh;
+
 }
 
 /* Import the Google Font 'Lato' */
@@ -71,6 +71,12 @@ body {
 .html + svg .outer#angular {
     stroke:  #de140d;
 }
+
+.html + svg .outer#ts {
+  stroke:  #3078c6;
+}
+
+
 
 
 .html + svg .outer#firebase {
@@ -284,4 +290,5 @@ body {
   }
 }
 /* END Keyframes for the initial animation */
+
 

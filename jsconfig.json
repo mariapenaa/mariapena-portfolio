@@ -1,0 +1,7 @@
+{
+    "compilerOptions": {
+      "baseUrl": "./frontend/src"
+    },
+    "exclude": ["node_modules", "build"],
+    "include": ["frontend/src"]
+}

@@ -2,10 +2,15 @@
 import React from 'react';
 import './About.scss'
 import { FaLinkedinIn } from 'react-icons/fa';
-import { FaGithub } from 'react-icons/fa';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { text } from 'text';
+import {text} from '../../../text'
+import me from '../../../images/maria.JPG'
+import {SiUpwork, SiWhitesource} from 'react-icons/si'
+import {SiFrontendmentor} from 'react-icons/si'
+import { FaGithub } from 'react-icons/fa';
+
+import { FaEnvelope } from 'react-icons/fa';
 
 const About = (props) => {
     let {text} = props
@@ -18,7 +23,7 @@ const About = (props) => {
             data-aos-delay="50"
             data-aos-duration="1000"
             data-aos-easing="ease"
-            data-aos-mirror="true"
+            data-aos-mirror="false"
             data-aos-once="false">{text.title}</p>
             <div className="about-subContainer">
                 <div className="text-container"
@@ -27,14 +32,35 @@ const About = (props) => {
                 data-aos-delay="50"
                 data-aos-duration="1000"
                 data-aos-easing="ease"
-                data-aos-mirror="true"
+                data-aos-mirror="false"
                 data-aos-once="false">
-                    <div className="mb-5">
+                    <div className="mb-4">
                         <p className="subtitle mb-1" >{text.iAm}</p>
                         <p className="proyect-text">{text.from}</p>
                     </div>
                     <div>
-                        <p className="proyect-title">{text.education}</p>
+                        <p className="proyect-text">{text.bio}</p>
+                    </div>
+                </div>
+                <div className="img-container"
+                data-aos="fade-left"
+                data-aos-offset="200"
+                data-aos-delay="50"
+                data-aos-duration="1000"
+                data-aos-easing="ease"
+                data-aos-mirror="false"
+                data-aos-once="false">
+                    <div className="img-square"><img src={me} alt="maria pena" /> </div>
+                    <div className="icon-container mt-5">
+                            <span><a target="_blank" href="https://www.linkedin.com/in/maria-pe%C3%B1a-721b531a3/"><FaLinkedinIn className="social-icons"/></a></span>
+                            <span><a target="_blank" href="https://github.com/mariapenaa"><FaGithub className="social-icons"/></a></span>
+                            <span><a target="_blank" href="https://www.frontendmentor.io/profile/mariapenaa"><SiFrontendmentor className="social-icons"/></a></span>
+                            <span><a target="_blank" href="https://www.upwork.com/freelancers/mariapenadev"><SiUpwork className="social-icons"/></a></span>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <p className="proyect-title">{text.education}</p>
                         <ul className="mt-4">
                             {text.educationArr.map(e=>
                                 <React.Fragment>
@@ -46,22 +72,6 @@ const About = (props) => {
                                 </React.Fragment>
                             )}
                         </ul>
-                    </div>
-                </div>
-                <div className="img-container"
-                data-aos="fade-left"
-                data-aos-offset="200"
-                data-aos-delay="50"
-                data-aos-duration="1000"
-                data-aos-easing="ease"
-                data-aos-mirror="true"
-                data-aos-once="false">
-                    <div className="img-square"></div>
-                    <div className="icon-container">
-                        <span><FaLinkedinIn className="social-icons"/></span>
-                        <span><FaGithub className="social-icons"/></span>
-                    </div>
-                </div>
             </div>
         </div>
     )

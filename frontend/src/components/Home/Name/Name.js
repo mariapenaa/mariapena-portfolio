@@ -21,7 +21,7 @@ const Name = (props) => {
                     data-aos-delay="50"
                     data-aos-duration="1000"
                     data-aos-easing="ease-in"
-                    data-aos-mirror="true"
+                    data-aos-mirror="false"
                     data-aos-once="false">Maria <br />Peña</p>
                 <div className="name-line"
                 data-aos="fade-right"

@@ -15,7 +15,7 @@ const Feedback = () => {
             data-aos-delay="50"
             data-aos-duration="1000"
             data-aos-easing="ease"
-            data-aos-mirror="true"
+            data-aos-mirror="false"
             data-aos-once="false">Feedback</p>
             <div className="container feedback-container">
                 <div className="row w-100">

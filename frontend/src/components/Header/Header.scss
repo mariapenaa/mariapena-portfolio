@@ -156,3 +156,24 @@ ul a:focus::after {
   li:nth-child(3) a:focus::after{
     transform: scale(1);
   }
+
+@media only screen and (max-width: 600px) {
+    .header {
+        justify-content: center;
+        padding:0 3rem;
+    }
+
+    .header1 {
+        justify-content: center;
+        padding:0 3rem;
+        ul {
+            padding:0;
+        }
+    }
+
+    .header-container {
+        width:100%;
+        padding:0;
+
+    }
+}

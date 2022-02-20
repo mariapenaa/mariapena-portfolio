@@ -58,3 +58,19 @@
     color:white;
     font-size:5rem;
 }
+
+@media only screen and (max-width: 600px) {
+    .main-title {
+        font-size:5rem;
+        line-height:77px;
+    }
+
+    .subtitle {
+        font-size:1.2rem;
+    }
+
+    .name-line .subtitle {
+        right: 16%;
+        width: 70%;
+    }
+}

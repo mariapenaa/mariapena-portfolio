@@ -1,7 +1,7 @@
 .service-square {
     background-color:white;
     min-height:30vh;
-    width:40%;
+    width:28%;
     border-radius:20px;
     margin:20px 20px;
     display:flex;
@@ -9,15 +9,17 @@
     justify-content:center;
     align-items: center;
     transition:all 400ms;
+    padding:1rem 1.2rem;
+    flex-grow:1;
 }
 
 .service-square:hover {
     transform: scale(1.06);
 }
 
-.service-container {
+/* .service-container {
     height:88vh;
-} 
+}  */
 
 .service-title {
     font-size:2rem;
@@ -32,9 +34,47 @@
 }
 
 .icon-container {
-    height:40%;
+    height:7rem;
+    display:flex;
+    align-items:center;
+    justify-content: center;
 }
 
+
+
 .service-icon {
-    font-size:8rem;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+@media only screen and (max-width: 600px) { 
+    .service-container > div {
+        flex-direction:column;
+        width:100%;
+    }
+
+    .service-square {
+        width:100%;
+        margin:1rem 0;
+    }
+
+    .service-container {
+        padding-top:0 !important;
+    }
+
+    .service-container > div {
+        margin:0;
+    }
+
+    .service-title {
+        font-size:1.2rem;
+    }
+
+    .icon-container {
+        height:6rem;
+    }
+
+    .service-text {
+        font-size:0.8rem;
+    }
 }
