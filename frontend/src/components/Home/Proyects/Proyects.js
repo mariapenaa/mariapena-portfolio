@@ -34,6 +34,19 @@ import makeupDesktop2 from '../../../videos/makeup/makeupDesktop.webm'
 import makeupMobile1 from '../../../videos/makeup/makeupMobile.mp4'
 import makeupMobile2 from '../../../videos/makeup/makeupMobile.webm'
 
+import commentImgDesktop from '../../../images/screenshots/commentImgDesktop.png'
+import commentImgMobile from '../../../images/screenshots/commentImgMobile.png'
+import ipImgDesktop from '../../../images/screenshots/ipImgDesktop.png'
+import ipImgMobile from '../../../images/screenshots/ipImgMobile.png'
+import makeupImgDesktop from '../../../images/screenshots/makeupImgDesktop.png'
+import makeupImgMobile from '../../../images/screenshots/makeupImgMobile.png'
+import manageImgDesktop from '../../../images/screenshots/manageImgDesktop.png'
+import manageImgMobile from '../../../images/screenshots/manageImgMobile.png'
+import spaceImgDesktop from '../../../images/screenshots/spaceImgDesktop.png'
+import spaceImgMobile from '../../../images/screenshots/spaceImgMobile.png'
+import sunnyImgDesktop from '../../../images/screenshots/sunnyImgDesktop.png'
+import sunnyImgMobile from '../../../images/screenshots/sunnyImgMobile.png'
+
 const Proyects = (props) => {
     let {text} = props;
     AOS.init()
@@ -44,7 +57,9 @@ const Proyects = (props) => {
             mobile1:manageMobile1,
             mobile2:manageMobile2,
             github:'https://github.com/mariapenaa/manage-landingpage',
-            live:'https://mariapenaa.github.io/manage-landingpage/'
+            live:'https://mariapenaa.github.io/manage-landingpage/',
+            imgDesktop:manageImgDesktop,
+            imgMobile:manageImgMobile
         },
         'comment': {
             desktop1: commentDesktop1,
@@ -52,7 +67,9 @@ const Proyects = (props) => {
             mobile1:commentMobile1,
             mobile2:commentMobile2,
             github:'https://github.com/mariapenaa/comment-section',
-            live:'https://comment-forum-330c8.web.app/'
+            live:'https://comment-forum-330c8.web.app/',
+            imgDesktop:commentImgDesktop,
+            imgMobile:commentImgMobile
         },
         'sunnyside': {
             desktop1: sunnyDestop1,
@@ -60,7 +77,9 @@ const Proyects = (props) => {
             mobile1:sunnyMobile1,
             mobile2:sunnyMobile2,
             github:'https://github.com/mariapenaa/sunnyside-landing',
-            live:'https://mariapenaa.github.io/sunnyside-landing/'
+            live:'https://mariapenaa.github.io/sunnyside-landing/',
+            imgDesktop:sunnyImgDesktop,
+            imgMobile:sunnyImgMobile
         },
         'space': {
             desktop1: spaceDesktop1,
@@ -68,7 +87,9 @@ const Proyects = (props) => {
             mobile1:spaceMobile1,
             mobile2:spaceMobile2,
             github:'https://github.com/mariapenaa/space-landingpage',
-            live:'https://mariapenaa.github.io/space-landingpage/'
+            live:'https://mariapenaa.github.io/space-landingpage/',
+            imgDesktop:spaceImgDesktop,
+            imgMobile:spaceImgMobile
         },
         'ip': {
             desktop1: ipDesktop1,
@@ -76,7 +97,9 @@ const Proyects = (props) => {
             mobile1:ipMobile1,
             mobile2:ipMobile2,
             github:'https://github.com/mariapenaa/ip-address-tracker',
-            live:'https://mariapenaa.github.io/ip-address-tracker/'
+            live:'https://mariapenaa.github.io/ip-address-tracker/',
+            imgDesktop:ipImgDesktop,
+            imgMobile:ipImgMobile
         },
         'music': {
             desktop1: manageDesktop1,
@@ -84,7 +107,9 @@ const Proyects = (props) => {
             mobile1:manageMobile1,
             mobile2:manageMobile2,
             github:'https://github.com/mariapenaa/manage-landingpage',
-            live:'https://mariapenaa.github.io/manage-landingpage/'
+            live:'https://mariapenaa.github.io/manage-landingpage/',
+            imgDesktop:manageImgDesktop,
+            imgMobile:manageImgMobile
         },
         'quiz': {
             desktop1: manageDesktop1,
@@ -92,7 +117,7 @@ const Proyects = (props) => {
             mobile1:manageMobile1,
             mobile2:manageMobile2,
             github:'https://github.com/mariapenaa/manage-landingpage',
-            live:'https://mariapenaa.github.io/manage-landingpage/'
+            live:'https://mariapenaa.github.io/manage-landingpage/',
         },
         'makeup': {
             desktop1: makeupDesktop1,
@@ -100,7 +125,9 @@ const Proyects = (props) => {
             mobile1:makeupMobile1,
             mobile2:makeupMobile2,
             github:'https://github.com/catalinaarias01/proyectoparcial',
-            live:'https://github.com/catalinaarias01/proyectoparcial'
+            live:'https://github.com/catalinaarias01/proyectoparcial',
+            imgDesktop:makeupImgDesktop,
+            imgMobile:makeupImgMobile
         },
 
     }
@@ -125,15 +152,15 @@ const Proyects = (props) => {
                     data-aos-mirror="false"
                     data-aos-once="false">
                         <div className="square">
-                            <video width="500" height="240" autoPlay muted className="desktopVideo" loop>
+                            <video width="500" height="240" controls="false" autoPlay muted className="desktopVideo" loop>
                                 <source src={videos[e.key].desktop1 } type="video/mp4"  /> 
                                 <source src={videos[e.key].desktop2}  type="video/webm" />
-                                Your browser does not support the video tag.
+                                <img src={videos[e.key].imgDesktop} alt="desktop version of website" />
                             </video>
-                            <video width="320" height="240" autoPlay muted className="mobileVideo" loop>
+                            <video width="320" height="240" controls="false" autoPlay muted className="mobileVideo" loop>
                                 <source src={videos[e.key].mobile1 } type="video/mp4"  />
                                 <source src={videos[e.key].mobile2 }  type="video/webm" />
-                                Your browser does not support the video tag.
+                                <img src={videos[e.key].imgMobile} alt="mobile version of website" />
                             </video>
                         </div>
                         <div className="proyect-textContainer">

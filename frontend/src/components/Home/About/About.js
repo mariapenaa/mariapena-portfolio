@@ -62,9 +62,9 @@ const About = (props) => {
                         <ul className="mt-4">
                             {text.educationArr.map((e, idx)=>
                                 <React.Fragment key={idx}>
-                                    <li className="mb-3">
+                                    <li className="mb-2">
                                         <p className="about-list">{e.title}</p>
-                                        <p className="proyect-text">{e.description}</p>
+                                        {/* <p className="proyect-text">{e.description}</p> */}
                                     </li>
                                     <hr className="line-hr"/>
                                 </React.Fragment>
