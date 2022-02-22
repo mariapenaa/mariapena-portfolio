@@ -17,7 +17,7 @@ function App() {
   }
 
   const setGA = () => {
-    ReactGA.initialize(process.env.REACT_APP_GA);
+    ReactGA.initialize('G-BVPP4E9SEJ');
     ReactGA.pageview('Init page view');
   };
 

@@ -2,7 +2,7 @@ import React from 'react';
 import './Proyectos.scss'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { FaGithub } from 'react-icons/fa';
+import { FaGithub, FaLaptopHouse } from 'react-icons/fa';
 import LinkIcon from '@material-ui/icons/Link';
 import manageDesktop1 from '../../../videos/manage/manageDesktop.mp4'
 import manageDesktop2 from '../../../videos/manage/manageDesktop.webm'
@@ -152,12 +152,12 @@ const Proyects = (props) => {
                     data-aos-mirror="false"
                     data-aos-once="false">
                         <div className="square">
-                            <video width="500" height="240" controls="false" autoPlay muted className="desktopVideo" loop>
+                            <video width="500" height="240" controls={false} autoPlay muted className="desktopVideo" loop>
                                 <source src={videos[e.key].desktop1 } type="video/mp4"  /> 
                                 <source src={videos[e.key].desktop2}  type="video/webm" />
                                 <img src={videos[e.key].imgDesktop} alt="desktop version of website" />
                             </video>
-                            <video width="320" height="240" controls="false" autoPlay muted className="mobileVideo" loop>
+                            <video width="320" height="240" controls={false} autoPlay muted className="mobileVideo" loop>
                                 <source src={videos[e.key].mobile1 } type="video/mp4"  />
                                 <source src={videos[e.key].mobile2 }  type="video/webm" />
                                 <img src={videos[e.key].imgMobile} alt="mobile version of website" />
