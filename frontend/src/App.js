@@ -1,10 +1,11 @@
 
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import Header from './components/Header/Header';
 import Home from './components/Home/Home';
 import './App.scss'
 import argentina from './images/flags/argentina.png'
 import usa from './images/flags/usa.png'
+import ReactGA from 'react-ga';
 
 function App() {
   const [language, setLanguage] = useState('english')
@@ -14,6 +15,16 @@ function App() {
     setLanguage(language)
     setDisplay(true)
   }
+
+  const setGA = () => {
+    ReactGA.initialize(process.env.REACT_APP_GA);
+    ReactGA.pageview('Init page view');
+  };
+
+  useEffect(() => {
+   setGA()
+  })
+
 
   return (
     <React.Fragment>
