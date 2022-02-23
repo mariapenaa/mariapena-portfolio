@@ -89,7 +89,7 @@ const Contact = (props) => {
     let {text} = props;
     const [open, setOpen] = React.useState(false);
     const [message, setMessage] = React.useState('');
-    const [success, setSuccess] = React.useState('');
+    const [success, setSuccess] = React.useState('success');
     const [loading, setLoading] = React.useState(false);
     const classes = useStyles();
     const errorObject = {
@@ -136,7 +136,7 @@ const Contact = (props) => {
             }
             axios({
                 method: "POST", 
-                url:"https://inspiring-golick-682ae8.netlify.app/contacto", 
+                url:"http://localhost:8080/contacto", 
                 data: data,
                 }).then((response)=>{
                 if (response.data.status === 'sent'){
