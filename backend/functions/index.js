@@ -3,6 +3,8 @@ const router = express.Router();
 const cors = require("cors");
 const nodemailer = require("nodemailer");
 require('dotenv').config({path:'../.env'})
+const serverless = require('serverless-http');
+app.use(cors())
 
 const PORT = process.env.PORT || 8080;
 
@@ -38,7 +40,30 @@ if (error) {
     }
   });
 
-  router.post("/contacto", (req, res) => {
+  router.get('/', cors(), (req, res) => {
+    res.json(
+        [
+            {
+                'id': '001',
+                'name': 'Smith',
+                'email': 'smith@gmail.com'
+            },
+            {
+                'id': '002',
+                'name': 'Sam',
+                'email': 'sam@gmail.com'
+            },
+            {
+                'id': '003',
+                'name': 'lily',
+                'email': 'lily@gmail.com'
+            }
+        ]
+    )
+})
+
+
+  router.post("/contacto", cors(), (req, res) => {
     const name = req.body.name;
     const email = req.body.email;
     const subject = req.body.subject;
@@ -58,3 +83,5 @@ if (error) {
       }
     });
   });
+
+  module.exports.handler = serverless(app);
