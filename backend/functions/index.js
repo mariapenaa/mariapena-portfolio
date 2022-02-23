@@ -15,14 +15,6 @@ app.use(express.json());
 app.use("/", router);
 
 
-const contactEmail = nodemailer.createTransport({
-    host: "smtp.gmail.com",
-    port: 587,
-    auth: {
-      user: process.env.REACT_APP_MAIL_USER,
-      pass:process.env.REACT_APP_MAIL_PASSWORD,
-    },
-  });
 /* 
 contactEmail.verify(function(error, success) {
 if (error) {
@@ -37,6 +29,15 @@ if (error) {
 
 
   router.post("/contacto", (req, res) => {
+
+    const contactEmail = nodemailer.createTransport({
+      host: "smtp.gmail.com",
+      port: 587,
+      auth: {
+        user: process.env.REACT_APP_MAIL_USER,
+        pass:process.env.REACT_APP_MAIL_PASSWORD,
+      },
+    });
     contactEmail.verify((error) => {
       if (error) {
         console.log(error);
