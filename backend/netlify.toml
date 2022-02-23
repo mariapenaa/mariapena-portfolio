@@ -2,7 +2,7 @@
     functions="functions"
 
 [[redirects]]
-    to="/.netlify/functions/index"
+    to="/.netlify/functions/api"
     from="/*"
     status=200 
 
