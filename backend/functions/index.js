@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const cors = require("cors");
 const nodemailer = require("nodemailer");
-require('dotenv').config({path:'../../.env'})
+require('dotenv').config()
 const serverless = require('serverless-http');
 
 const PORT = process.env.PORT || 8080;
@@ -34,8 +34,8 @@ if (error) {
       host: "smtp.gmail.com",
       port: 587,
       auth: {
-        user: process.env.REACT_APP_MAIL_USER,
-        pass:process.env.REACT_APP_MAIL_PASSWORD,
+        user: process.env.MAIL_USER,
+        pass:process.env.MAIL_PASSWORD,
       },
     });
     contactEmail.verify((error) => {

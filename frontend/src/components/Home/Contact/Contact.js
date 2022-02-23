@@ -136,7 +136,7 @@ const Contact = (props) => {
             }
             axios({
                 method: "POST", 
-                url:"http://localhost:8080/contacto", 
+                url:"https://inspiring-golick-682ae8.netlify.app/contacto", 
                 data: data,
                 }).then((response)=>{
                 if (response.data.status === 'sent'){
