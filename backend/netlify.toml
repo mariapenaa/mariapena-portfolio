@@ -2,6 +2,13 @@
     functions="functions"
 
 [[redirects]]
-    to="/.netlify/functions/index:splat"
+    to="/.netlify/functions/index"
     from="/*"
     status=200 
+
+[[headers]]
+  for = "/*"
+    [headers.values]
+    Access-Control-Allow-Origin = 'https://boring-noyce-b67dba.netlify.app'
+    Access-Control-Allow-Methods = 'GET, POST, PATCH, PUT, DELETE, OPTIONS'
+    Access-Control-Allow-Headers= 'Origin, Content-Type, X-Auth-Token'
