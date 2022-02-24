@@ -9,7 +9,7 @@ import ReactGA from 'react-ga';
 
 function App() {
   const [language, setLanguage] = useState('english')
-  const [display, setDisplay] = useState(false)
+  const [display, setDisplay] = useState(true)
   
   const toggleLanguage = (language) => {
     setLanguage(language)
