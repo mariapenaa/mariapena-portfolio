@@ -101,7 +101,13 @@
     }
 }
 
+.project-img {
+    display:none;
+}
+
 @media only screen and (max-width: 1228px) {
+
+
     .proyectInfoInvert, .proyectInfoNormal {
         flex-direction:column;
     }
@@ -161,4 +167,13 @@
     }
 }
 
+@media only screen and (max-width:800px) {
+    .project-img {
+        display:block;
+    }
+
+    video {
+        display:none;
+    }
+}
 

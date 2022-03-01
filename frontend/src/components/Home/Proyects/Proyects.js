@@ -152,22 +152,18 @@ const Proyects = (props) => {
                     data-aos-mirror="false"
                     data-aos-once="false">
                         <div className="square">
-                            {videos[e.key].desktop1 ?
                                 <video onLoadedData={()=>console.log('loaded')} width="500" height="240" controls={false} autoPlay muted className="desktopVideo" loop>
                                     <source src={videos[e.key].desktop1 } type="video/mp4"  /> 
                                     <source src={videos[e.key].desktop2}  type="video/webm" />
                                     <img src={videos[e.key].imgDesktop} alt="desktop version of website" />
                                 </video>
-                                : <img src={videos[e.key].imgDesktop} alt="desktop version of website" />
-                            }
-                            {videos[e.key].mobile1 ?
+                                <img className="project-img desktopVideo" src={videos[e.key].imgDesktop} alt="desktop version of website" />
                                 <video width="320" height="240" controls={false} autoPlay muted className="mobileVideo" loop>
                                     <source src={videos[e.key].mobile1 } type="video/mp4"  />
                                     <source src={videos[e.key].mobile2 }  type="video/webm" />
                                     <img src={videos[e.key].imgMobile} alt="mobile version of website" />
                                 </video>
-                                : <img src={videos[e.key].imgMobile} alt="mobile version of website" />
-                            }
+                                <img  className="project-img mobileVideo" src={videos[e.key].imgMobile} alt="mobile version of website" />
                         </div>
                         <div className="proyect-textContainer">
                             <p className="proyect-title">{e.title}</p>
