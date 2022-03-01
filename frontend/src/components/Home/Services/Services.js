@@ -52,7 +52,7 @@ const Services = (props) => {
                                 {iconRender(e.key)}
                             </div>
                             <div className="service-textContainer">
-                                <p className="service-title">{e.title}</p>
+                                <h3 className="service-title">{e.title}</h3>
                                 <p className="service-text">{e.description}</p>
                             </div>
                         </div>

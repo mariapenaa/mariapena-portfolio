@@ -13,14 +13,14 @@ const Name = (props) => {
         <div className="name-mainContainer">
             <div className="name-container">
                 <p className="subtitle">{text.subtitle}</p>
-                <p className="main-title"
+                <h1 className="main-title"
                     data-aos="fade-up"
                     data-aos-offset="200"
                     data-aos-delay="50"
                     data-aos-duration="1000"
                     data-aos-easing="ease-in"
                     data-aos-mirror="false"
-                    data-aos-once="false">Maria <br />Peña</p>
+                    data-aos-once="false">Maria <br />Peña</h1>
                 <div className="name-line"
                 data-aos="fade-right"
                 data-aos-offset="200"
@@ -28,9 +28,9 @@ const Name = (props) => {
                 data-aos-duration="1900"
                 data-aos-easing="ease-in">
                     <div className="line"></div>
-                    <p className="subtitle mb-0" 
+                    <h2 className="subtitle mb-0" 
                     
-                    >{text.role}</p>
+                    >{text.role}</h2>
                 </div>
 
 
