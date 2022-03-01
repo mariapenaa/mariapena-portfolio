@@ -32,14 +32,23 @@
     justify-content: space-between;
 }
 
+.about-list-ul {
+    li {
+        padding: 1.4rem 0;
+        border-bottom: solid white 1px;
+    }
+}
+
 .about-list {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
     font-size: 1.8rem;
     line-height: 29px;
+    font-display: auto;
     color:white;
     list-style: circle;
+    margin-bottom:0px;
 }
 
 .line-hr {

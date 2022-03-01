@@ -229,7 +229,9 @@ const Contact = (props) => {
                     <form className="mt-5">
                         <div className="row w-100 " style={{marginBottom:'4rem'}}>
                             <div className="col w-50">
+                                <label htmlFor="name">Name</label>
                                 <TextField
+                                id="name"
                                 className={classes.input} 
                                 value={name} onChange={(e)=>setName(e.target.value)} 
                                 label={text.placeholders.name} 
@@ -238,7 +240,9 @@ const Contact = (props) => {
                                 <p className="error">{error.name}</p>
                             </div>
                             <div className="col w-50">
+                                <label htmlFor="email">email</label>
                                 <TextField 
+                                id="email"
                                 className={classes.input} 
                                 value={email}  
                                 onChange={(e)=>setEmail(e.target.value)} 
@@ -249,7 +253,9 @@ const Contact = (props) => {
                         </div>
                         <div className="row w-100" style={{marginBottom:'4rem'}}>
                             <div className="col ">
+                            <label htmlFor="subject">subject</label>
                                 <TextField 
+                                id="subject"
                                 className={classes.input} 
                                 value={subject}  
                                 onChange={(e)=>setSubject(e.target.value)} 
@@ -261,7 +267,9 @@ const Contact = (props) => {
                         </div>
                         <div className="row w-100 mb-3 mt-3">
                             <div className="col">
+                                <label htmlFor="content">content</label>
                                 <TextField 
+                                id="content"
                                 multiline
                                 rows={4}
                                 value={content}
@@ -289,10 +297,10 @@ const Contact = (props) => {
                     <p className="proyect-text mt-5" style={{fontSize:'1.5rem'}}>mariapena@gmail.com</p>
                     <p className="proyect-text mt-3" style={{textAlign:'left', fontSize:'1.5rem'}}>+54 9 11 4176-6805</p>
                     <div className="icon-container mt-5">
-                            <span><a rel="noreferrer" target="_blank" href="https://www.linkedin.com/in/maria-pe%C3%B1a-721b531a3/"><FaLinkedinIn className="social-icons"/></a></span>
-                            <span><a rel="noreferrer" target="_blank" href="https://github.com/mariapenaa"><FaGithub className="social-icons"/></a></span>
-                            <span><a rel="noreferrer" target="_blank" href="https://www.frontendmentor.io/profile/mariapenaa"><SiFrontendmentor className="social-icons"/></a></span>
-                            <span><a rel="noreferrer" target="_blank" href="https://www.upwork.com/freelancers/mariapenadev"><SiUpwork className="social-icons"/></a></span>
+                    <span><a  aria-label="linkedin" rel="noreferrer" target="_blank" href="https://www.linkedin.com/in/maria-pe%C3%B1a-721b531a3/"><FaLinkedinIn className="social-icons"/></a></span>
+                            <span><a  aria-label="github" rel="noreferrer" target="_blank" href="https://github.com/mariapenaa"><FaGithub className="social-icons"/></a></span>
+                            <span><a  aria-label="frontend mentor" rel="noreferrer" target="_blank" href="https://www.frontendmentor.io/profile/mariapenaa"><SiFrontendmentor className="social-icons"/></a></span>
+                            <span><a  aria-label="upwork" rel="noreferrer" target="_blank" href="https://www.upwork.com/freelancers/mariapenadev"><SiUpwork className="social-icons"/></a></span>
                     </div>
                 </div>
             </div>

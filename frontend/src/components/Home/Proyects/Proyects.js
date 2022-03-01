@@ -2,7 +2,7 @@ import React from 'react';
 import './Proyectos.scss'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { FaGithub, FaLaptopHouse } from 'react-icons/fa';
+import { FaGithub } from 'react-icons/fa';
 import LinkIcon from '@material-ui/icons/Link';
 import manageDesktop1 from '../../../videos/manage/manageDesktop.mp4'
 import manageDesktop2 from '../../../videos/manage/manageDesktop.webm'
@@ -34,18 +34,18 @@ import makeupDesktop2 from '../../../videos/makeup/makeupDesktop.webm'
 import makeupMobile1 from '../../../videos/makeup/makeupMobile.mp4'
 import makeupMobile2 from '../../../videos/makeup/makeupMobile.webm'
 
-import commentImgDesktop from '../../../images/screenshots/commentImgDesktop.png'
-import commentImgMobile from '../../../images/screenshots/commentImgMobile.png'
-import ipImgDesktop from '../../../images/screenshots/ipImgDesktop.png'
-import ipImgMobile from '../../../images/screenshots/ipImgMobile.png'
-import makeupImgDesktop from '../../../images/screenshots/makeupImgDesktop.png'
-import makeupImgMobile from '../../../images/screenshots/makeupImgMobile.png'
-import manageImgDesktop from '../../../images/screenshots/manageImgDesktop.png'
-import manageImgMobile from '../../../images/screenshots/manageImgMobile.png'
-import spaceImgDesktop from '../../../images/screenshots/spaceImgDesktop.png'
-import spaceImgMobile from '../../../images/screenshots/spaceImgMobile.png'
-import sunnyImgDesktop from '../../../images/screenshots/sunnyImgDesktop.png'
-import sunnyImgMobile from '../../../images/screenshots/sunnyImgMobile.png'
+import commentImgDesktop from '../../../images/screenshots/commentImgDesktop.webp'
+import commentImgMobile from '../../../images/screenshots/commentImgMobile.webp'
+import ipImgDesktop from '../../../images/screenshots/ipImgDesktop.webp'
+import ipImgMobile from '../../../images/screenshots/ipImgMobile.webp'
+import makeupImgDesktop from '../../../images/screenshots/makeupImgDesktop.webp'
+import makeupImgMobile from '../../../images/screenshots/makeupImgMobile.webp'
+import manageImgDesktop from '../../../images/screenshots/manageImgDesktop.webp'
+import manageImgMobile from '../../../images/screenshots/manageImgMobile.webp'
+import spaceImgDesktop from '../../../images/screenshots/spaceImgDesktop.webp'
+import spaceImgMobile from '../../../images/screenshots/spaceImgMobile.webp'
+import sunnyImgDesktop from '../../../images/screenshots/sunnyImgDesktop.webp'
+import sunnyImgMobile from '../../../images/screenshots/sunnyImgMobile.webp'
 
 const Proyects = (props) => {
     let {text} = props;
@@ -152,16 +152,22 @@ const Proyects = (props) => {
                     data-aos-mirror="false"
                     data-aos-once="false">
                         <div className="square">
-                            <video width="500" height="240" controls={false} autoPlay muted className="desktopVideo" loop>
-                                <source src={videos[e.key].desktop1 } type="video/mp4"  /> 
-                                <source src={videos[e.key].desktop2}  type="video/webm" />
-                                <img src={videos[e.key].imgDesktop} alt="desktop version of website" />
-                            </video>
-                            <video width="320" height="240" controls={false} autoPlay muted className="mobileVideo" loop>
-                                <source src={videos[e.key].mobile1 } type="video/mp4"  />
-                                <source src={videos[e.key].mobile2 }  type="video/webm" />
-                                <img src={videos[e.key].imgMobile} alt="mobile version of website" />
-                            </video>
+                            {videos[e.key].desktop1 ?
+                                <video onLoadedData={()=>console.log('loaded')} width="500" height="240" controls={false} autoPlay muted className="desktopVideo" loop>
+                                    <source src={videos[e.key].desktop1 } type="video/mp4"  /> 
+                                    <source src={videos[e.key].desktop2}  type="video/webm" />
+                                    <img src={videos[e.key].imgDesktop} alt="desktop version of website" />
+                                </video>
+                                : <img src={videos[e.key].imgDesktop} alt="desktop version of website" />
+                            }
+                            {videos[e.key].mobile1 ?
+                                <video width="320" height="240" controls={false} autoPlay muted className="mobileVideo" loop>
+                                    <source src={videos[e.key].mobile1 } type="video/mp4"  />
+                                    <source src={videos[e.key].mobile2 }  type="video/webm" />
+                                    <img src={videos[e.key].imgMobile} alt="mobile version of website" />
+                                </video>
+                                : <img src={videos[e.key].imgMobile} alt="mobile version of website" />
+                            }
                         </div>
                         <div className="proyect-textContainer">
                             <p className="proyect-title">{e.title}</p>
@@ -169,7 +175,7 @@ const Proyects = (props) => {
                             <p className="proyect-text"> {e.description}</p>
                             <div className="proyect-buttonContainer">
                                 {e.key !== 'makeup' && <a rel="noreferrer" target="_blank" href={videos[e.key].live} ><LinkIcon style={{marginBottom:'0.2rem'}} /> Live site</a>}
-                                <a rel="noreferrer" target="_blank" href={videos[e.key].github} ><FaGithub style={{marginBottom:'0.2rem'}} /> Repo</a>
+                                <a aria-label="github repository" rel="noreferrer" target="_blank" href={videos[e.key].github} ><FaGithub style={{marginBottom:'0.2rem'}} /> Repo</a>
                             </div>
                         </div>
                     </div>

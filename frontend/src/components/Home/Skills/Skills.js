@@ -1,15 +1,15 @@
 import React from 'react';
 import './Skills.scss';
-import htmlLogo from './../../../images/html.png';
-import angularLogo from './../../../images/angular.png';
+import htmlLogo from './../../../images/compressed/html.webp';
+import angularLogo from './../../../images/compressed/angular.webp';
 import tsLogo from './../../../images/typescript.svg';
-import cssLogo from './../../../images/css.png';
-import firebaseLogo from './../../../images/firebase.png';
+import cssLogo from './../../../images/compressed/css.webp';
+import firebaseLogo from './../../../images/compressed/firebase.webp';
 import javascriptLogo from './../../../images/javascript.svg';
-import nodeLogo from './../../../images/node.png';
-import reactLogo from './../../../images/reactjs.png';
-import reactWhite from './../../../images/reactWhite.png';
-import sqlLogo from './../../../images/SQL.png';
+import nodeLogo from './../../../images/compressed/node.webp';
+import reactLogo from './../../../images/compressed/reactjs.webp';
+import reactWhite from './../../../images/compressed/reactWhite.webp';
+import sqlLogo from './../../../images/compressed/SQL.webp';
 import 'aos/dist/aos.css';
 
 const Skills = (props) => {

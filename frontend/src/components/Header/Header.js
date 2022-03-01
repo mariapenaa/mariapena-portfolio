@@ -36,10 +36,10 @@ const Header = () => {
      
                 <div className={scrolling}>
                     <div className="header-container">
-                        <a id="logo" href="#top" style={{textDecoration:'none'}}> <Logo className="logo" /></a>
+                        <a id="logo" href="#top" style={{textDecoration:'none'}} aria-label="top"> <Logo className="logo" /></a>
                         <ul>
                             <li>
-                                <a href="#contact">contact</a>
+                                <a aria-label="contact" href="#contact">contact</a>
                             </li>
                             {/* <li>Porfolio</li>
                             <li>Contact</li>

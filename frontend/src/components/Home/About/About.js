@@ -4,7 +4,7 @@ import './About.scss'
 import { FaLinkedinIn } from 'react-icons/fa';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import me from '../../../images/maria.JPG'
+import me from '../../../images/maria.webp'
 import {SiUpwork} from 'react-icons/si'
 import {SiFrontendmentor} from 'react-icons/si'
 import { FaGithub } from 'react-icons/fa';
@@ -50,24 +50,22 @@ const About = (props) => {
                 data-aos-once="false">
                     <div className="img-square"><img src={me} alt="maria pena" /> </div>
                     <div className="icon-container mt-5">
-                            <span><a rel="noreferrer" target="_blank" href="https://www.linkedin.com/in/maria-pe%C3%B1a-721b531a3/"><FaLinkedinIn className="social-icons"/></a></span>
-                            <span><a rel="noreferrer" target="_blank" href="https://github.com/mariapenaa"><FaGithub className="social-icons"/></a></span>
-                            <span><a rel="noreferrer" target="_blank" href="https://www.frontendmentor.io/profile/mariapenaa"><SiFrontendmentor className="social-icons"/></a></span>
-                            <span><a rel="noreferrer" target="_blank" href="https://www.upwork.com/freelancers/mariapenadev"><SiUpwork className="social-icons"/></a></span>
+                            <span><a  aria-label="linkedin" rel="noreferrer" target="_blank" href="https://www.linkedin.com/in/maria-pe%C3%B1a-721b531a3/"><FaLinkedinIn className="social-icons"/></a></span>
+                            <span><a  aria-label="github" rel="noreferrer" target="_blank" href="https://github.com/mariapenaa"><FaGithub className="social-icons"/></a></span>
+                            <span><a  aria-label="frontend mentor" rel="noreferrer" target="_blank" href="https://www.frontendmentor.io/profile/mariapenaa"><SiFrontendmentor className="social-icons"/></a></span>
+                            <span><a  aria-label="upwork" rel="noreferrer" target="_blank" href="https://www.upwork.com/freelancers/mariapenadev"><SiUpwork className="social-icons"/></a></span>
                     </div>
                 </div>
             </div>
             <div>
                 <p className="proyect-title">{text.education}</p>
-                        <ul className="mt-4">
+                        <ul className="mt-4 about-list-ul">
                             {text.educationArr.map((e, idx)=>
-                                <React.Fragment key={idx}>
-                                    <li className="mb-2">
+                                    <li key={idx}>
                                         <p className="about-list">{e.title}</p>
                                         {/* <p className="proyect-text">{e.description}</p> */}
                                     </li>
-                                    <hr className="line-hr"/>
-                                </React.Fragment>
+
                             )}
                         </ul>
             </div>

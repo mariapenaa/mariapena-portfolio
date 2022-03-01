@@ -30,7 +30,6 @@ function App() {
     <React.Fragment>
       {display ?
         <div className="body">
-     
             <div className="black-layer">
               <Header id="top" />
               <Home language={language}/>
