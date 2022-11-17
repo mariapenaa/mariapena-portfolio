@@ -1,12 +1,12 @@
 
 import React , { useState , useEffect} from 'react';
-import '../../styles/main.scss'
-import Logo from '../../shared/Logo/Logo'
+import '../styles/main.scss'
+import Logo from '../shared/Logo/Logo'
 import LinearProgress from '@material-ui/core/LinearProgress';
 
 const Header = () => {
     const [progress, setProgress] = useState(0);
-    const [scrolling, setScrolling] = useState('header1');
+    const [scrolling, setScrolling] = useState(false);
     const scrollTrigger = 500;
 
     useEffect(() => {
@@ -24,23 +24,21 @@ const Header = () => {
         //header
         if (window.scrollY >= scrollTrigger || window.pageYOffset >= scrollTrigger) {
             /* setScrolling(true) */
-            setScrolling('header')
-          } else {
-              setScrolling('header1')
-            /* setScrolling(false) */
-          }
+            setScrolling(true)
+        } else {
+            setScrolling(false)
+        /* setScrolling(false) */
+        }
     }
 
     return(
         <React.Fragment>
-     
                 <div className='header'>
                     <div className="header-container">
                         
                     </div>
                 </div>
-
-        <LinearProgress className={scrolling === 'header' ? 'progress' : 'hidden'} variant="determinate" value={progress} />
+        <LinearProgress className={scrolling === false ? 'progress' : 'hidden'} variant="determinate" value={progress} />
         </React.Fragment>
         
     )

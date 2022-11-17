@@ -195,31 +195,8 @@ const Contact = (props) => {
 
     return(
         <div className="contact-container mt-5" id="contact">
-            <p className="heading-1"
-            /* data-aos="fade-right"
-            data-aos-offset="200"
-            data-aos-delay="50"
-            data-aos-duration="1000"
-            data-aos-easing="ease"
-            data-aos-mirror="false"
-            data-aos-once="false" */>{text.title}</p>
-            {/*     <div className="row">
-                    <div className="col p-0">
-                        <p className="proyect-text">Have any project in mind?</p>
-                        <p className="proyect-text">Any ideas?</p>
-                        <p style={{textAlign:'left'}} className="subtitle mt-3">Let´s talk!</p>
-                    </div>
-                    <div className="col"></div>
-                </div> */}
-
-                <div className="about-subContainer mb-0"
-                /* data-aos="fade-up"
-                data-aos-offset="200"
-                data-aos-delay="50"
-                data-aos-duration="1200"
-                data-aos-easing="ease-in"
-                data-aos-mirror="false"
-                data-aos-once="false" */>
+      {/*       <p className="heading-1">{text.title}</p>
+                <div className="about-subContainer mb-0">
                 <div className="text-container about-textContainer ">
                     <div style={{marginBottom:'5rem'}}>
                         <p className="proyect-text">{text.subtitle}</p>
@@ -310,7 +287,7 @@ const Contact = (props) => {
                 <Alert onClose={handleClose} severity={success}>
                     {message}
                 </Alert>
-            </Snackbar>
+            </Snackbar> */}
         </div>
     )
 }

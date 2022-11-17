@@ -1,29 +1,13 @@
-.body {
-    background-image: url(./images/wallpaper.webp);
-    min-height:100vh;
-    position:relative;
-    width:100%;
-    background-size: cover;
-    background-repeat:repeat-y;
-    background-attachment:fixed;
-}
 
 .languageScreen {
     width:100%;
     height:100%;
-    background-image: url(./images/wallpaper.webp);
     position:relative;
     background-size: cover;
     background-repeat:repeat-y;
     background-attachment:fixed;
 }
 
-.black-layer {
-    background-color:rgba(24, 24, 24, 0.9);
-    z-index:5;
-    min-height:100vh;
-    width:100%;
-}
 
 .languageContainer {
     display:flex;

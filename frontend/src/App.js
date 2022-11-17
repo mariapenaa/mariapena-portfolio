@@ -1,11 +1,10 @@
 
 import React, {useState, useEffect} from 'react';
-import Header from './components/Header/Header';
-import Home from './components/Home/Home';
 import './App.scss'
 import argentina from './images/flags/argentina.png'
 import usa from './images/flags/usa.png'
 import ReactGA from 'react-ga';
+import Main from './components/Main';
 
 function App() {
   const [language, setLanguage] = useState('english')
@@ -29,10 +28,9 @@ function App() {
   return (
     <React.Fragment>
       {display ?
-        <div className="body">
-            <div className="black-layer">
-              <Header id="top" />
-              <Home language={language}/>
+        <div>
+            <div>
+              <Main language={language}/>
             </div>
 
         </div> :

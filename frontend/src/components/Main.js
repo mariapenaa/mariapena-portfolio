@@ -1,8 +1,7 @@
 
-import './Home.scss'
 import '../styles/main.scss'
 import React, {useState, useEffect} from 'react';
-import {text} from '../../text'
+import {text} from '../text'
 import { Suspense, lazy } from 'react';
 
 const Main = (props) => {
