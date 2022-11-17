@@ -15,14 +15,14 @@ import 'aos/dist/aos.css';
 const Skills = (props) => {
     return(
         <div className="skill-container pt-5">
-            <p className="heading-1"
+      {/*       <p className="heading-1"
             data-aos="fade-right"
             data-aos-offset="200"
             data-aos-delay="50"
             data-aos-duration="1000"
             data-aos-easing="ease"
             data-aos-mirror="false"
-            data-aos-once="false">{props.text.title}</p>
+            data-aos-once="false">{props.text.title}</p> */}
             <div className="graph container p-0 mt-5">
                 <div className="row mb-4 d-flex justify-content-around"
                 data-aos="fade-left"

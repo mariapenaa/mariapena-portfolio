@@ -15,7 +15,7 @@ const About = (props) => {
     AOS.init()
     return(
         <div className="about-container">
-            <p className="heading-1"
+       {/*      <p className="heading-1"
             data-aos="fade-right"
             data-aos-offset="200"
             data-aos-delay="50"
@@ -63,12 +63,11 @@ const About = (props) => {
                             {text.educationArr.map((e, idx)=>
                                     <li key={idx}>
                                         <p className="about-list">{e.title}</p>
-                                        {/* <p className="proyect-text">{e.description}</p> */}
                                     </li>
 
                             )}
                         </ul>
-            </div>
+            </div> */}
         </div>
     )
 }

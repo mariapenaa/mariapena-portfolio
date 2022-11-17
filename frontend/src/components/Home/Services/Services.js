@@ -29,14 +29,14 @@ const Services = (props) => {
 
     return(
         <div className="mb-5">
-            <p className="heading-1"
+            {/* <p className="heading-1"
             data-aos="fade-right"
             data-aos-offset="200"
             data-aos-delay="50"
             data-aos-duration="1000"
             data-aos-easing="ease"
             data-aos-mirror="false"
-            data-aos-once="false">{text.title}</p>
+            data-aos-once="false">{text.title}</p> */}
             <div className="service-container container"
             data-aos="fade-up"
             data-aos-offset="200"

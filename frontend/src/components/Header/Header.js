@@ -1,6 +1,6 @@
 
 import React , { useState , useEffect} from 'react';
-import './Header.scss'
+import '../../styles/main.scss'
 import Logo from '../../shared/Logo/Logo'
 import LinearProgress from '@material-ui/core/LinearProgress';
 
@@ -34,17 +34,9 @@ const Header = () => {
     return(
         <React.Fragment>
      
-                <div className={scrolling}>
+                <div className='header'>
                     <div className="header-container">
-                        <a id="logo" href="#top" style={{textDecoration:'none'}} aria-label="top"> <Logo className="logo" /></a>
-                        <ul>
-                            <li>
-                                <a aria-label="contact" href="#contact">contact</a>
-                            </li>
-                            {/* <li>Porfolio</li>
-                            <li>Contact</li>
-                            <li>Skills</li> */}
-                        </ul>
+                        
                     </div>
                 </div>
 
