@@ -1,0 +1,38 @@
+.star-container {
+    display:flex;
+    justify-content: center;
+}
+
+.slider-text {
+    width:800px;
+    margin: 0 32px;
+    padding: 0 32px;
+    min-height:221px;
+    h5 {
+        margin: 32px 0;
+        text-align:center;
+    }
+}
+
+.profile-container {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    p {
+        margin-bottom:0;
+    }
+    svg {
+        font-size:40px;
+        margin-right:16px;
+    }
+}
+
+.slider-container {
+    display: flex;
+    align-items: center;
+    z-index:2;
+}
+
+.arrow {
+    font-size:35px !important;
+}
