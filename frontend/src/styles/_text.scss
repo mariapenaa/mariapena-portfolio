@@ -1,10 +1,15 @@
+@function toRem($value) {
+    $remValue: ($value / 16) + rem; 
+    @return $remValue;
+}
+
 @mixin text($weight:500, $size:18, $height:24) {
     font-family: 'Helvetica Neue';
     font-style: normal;
     color: #000000;
     font-weight:$weight;
-    font-size:$size+px;
-    line-height:$height+px,
+    font-size:toRem($size);
+    line-height:toRem($height);
 }
 
 .body {
@@ -20,42 +25,44 @@ h6 {
 
 h5 {
     @include text(500, 25, 31);
-    letter-spacing: 0.5px;
+    letter-spacing: toRem(0.5);
     margin-bottom:0px;
 }
 
 h4 {
     @include text(700, 32, 39);
-    letter-spacing: 0.25px;
+    letter-spacing: toRem(0.25);
     margin:0;
 }
 
 h3 {
     @include text(700, 49, 49);
-    letter-spacing: 1px;
+    letter-spacing: toRem(1);
     margin-bottom:0px;
+    text-transform:capitalize;
 }
 
 h2 {
     @include text(700, 60, 73);
-    letter-spacing: -1px;
+    letter-spacing: -toRem(1);
     margin-bottom:0px;
 }
 
 h1 {
     @include text(700, 72, 88);
-    letter-spacing: 1px;
+    letter-spacing: toRem(1);
     margin-bottom:0px;
+    text-transform:capitalize;
 }
 
 .menu {
     @include text(500, 16, 20);
-    letter-spacing: 0.25px;
+    letter-spacing: toRem(0.25);
 }
 
 .button {
     @include text(700, 16, 20);
-    letter-spacing: 0.5px;
+    letter-spacing: toRem(0.5);
 
 }
 
@@ -70,5 +77,5 @@ h1 {
 
 .button-small {
     @include text(500, 14, 17);
-    letter-spacing: 0.25px;
+    letter-spacing: toRem(0.25);
 }

@@ -4,15 +4,17 @@ export  const text = [
         name: {
             role: 'fullstack developer',
             title: 'Hi! I am Maria Peña',
-            subtitle:'Developing stunning websites for over 5 years as a',
+            subtitle:'Developing stunning websites for over ',
             hireMe:'Hire me',
             github:'github',
+            years:' years',
+            asA:' as a ',
             happyClients:'happy clients',
             projectsDone:'projects done',
-            yearsExperience:'years of experience'
+            yearsExperience:'of experience'
         },
         statistics:{
-            title:'project statistics 2022',
+            title:'project statistics',
             learnMore:'learn more',
             webDev:'web development',
             softwareDev:'software development',
@@ -76,12 +78,14 @@ export  const text = [
         },
         about: {
             title: 'my all time',
-            title2:'advantage.',
+            title2:'advantage',
             text:'I am also well-versed in many other frameworks and languages but these ones are my favourites! Of course I also know many other neccessary webdevelopment language to their best!',
             projects:'projects',
             years:'years',
         },
         education: {
+            professional:'professional',
+            education:'education',
             frontendDev:'Frontend Development',
             digitalHouse:'Digital House',
             backendDev:'Backend Development',
@@ -106,19 +110,21 @@ export  const text = [
         ],
         contact: {
             title:'get in touch',
+            lastName:'last name',
+            phone:'phone',
             subtitle:'Fill up the form and I will get back to you withinthe next 24 hours.',
             firstName:'first name',
             mail:'Mail',
             message:'message',
             whichService:'Which service do you need?',
-            services:[
-                'full website',
-                'design to code',
-                'desktop to mobile',
-                'single page',
-                'html email template',
-                'other'
-            ]
+            fullWebsite:'full website',
+            designCode:'design to code',
+            desktop:'desktop to mobile',
+            singlePage:'single page',
+            html:'html email template',
+            redesign:'website redesign',
+            other:'other',
+            sendMessage:'send message'
 
         },
         header: {
@@ -140,12 +146,14 @@ export  const text = [
         name: {
             role: 'desarrolladora fullstack',
             title: 'Hola! Soy Maria Peña',
-            subtitle:'Diseñando páginas por más de 5 años como ',
+            subtitle:'Diseñando páginas por más de ',
             hireMe:'Contrátame',
             github:'github',
+            years:' años',
+            asA:' como ',
             happyClients:'clientes felices',
             projectsDone:'proyectos completados',
-            yearsExperience:'años de experiencia'
+            yearsExperience:'de experiencia'
         },
         statistics:{
             title:'estadísticas de proyectos 2022',
@@ -212,12 +220,14 @@ export  const text = [
         },
         about: {
             title: 'en qué me',
-            title2:'destaco.',
+            title2:'destaco',
             text:'También tengo conocimientos de otros frameworks e idiomas, pero estos son mis favoritos!',
             projects:'proyectos',
             years:'años',
         },
         education: {
+            professional:'educación',
+            education:'profesional',
             frontendDev:'Desarrollo Frontend',
             digitalHouse:'Digital House',
             backendDev:'Desarrollo Backend',
@@ -243,18 +253,20 @@ export  const text = [
         contact: {
             title:'Ponete en contacto',
             subtitle:'Llená el formulario y te responderé en menos de 24 horas.',
-            firstName:'first name',
+            firstName:'nombre',
+            lastName:'apellido',
+            phone:'tel',
             mail:'Email',
             message:'mensaje',
             whichService:'qué service necesitás?',
-            services:[
-                'Página web',
-                'Diseño a código',
-                'Desktop a mobile',
-                'Una sola página',
-                'HTML template para mail',
-                'otro'
-            ]
+            fullWebsite:'sitio web',
+            designCode:'diseño a código',
+            desktop:'desktop a móvil',
+            singlePage:'una sola página web',
+            html:'template HTML para mail',
+            redesign:'rediseño web',
+            other:'otro',
+            sendMessage:'enviar mensaje'
 
         },
         header: {

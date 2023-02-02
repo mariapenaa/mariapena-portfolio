@@ -25,6 +25,7 @@ import QuoteBlue from '../images/shapes/quote-shape-blue.svg'
 import QuoteOrange from '../images/shapes/quote-shape.svg'
 import PhoneIcon from '@mui/icons-material/Call'
 import MailIcon from '@mui/icons-material/Mail'
+import NorthIcon from '@mui/icons-material/NorthEast'
 
 function getWindowDimensions() {
     const { innerWidth: width, innerHeight: height } = window;
@@ -92,28 +93,28 @@ const Main = (props) => {
         <React.Fragment>
             {data !== {} &&
             <div>
-                <Header />
+                <Header text={data.header}/>
                 <div className="main">
                     <div className="presentation-block">
                         <div className="text-block-title">
-                            <h1 className="bottom-36">Hi! I am Maria Peña</h1>
-                            <h6 className="bottom-36">Developing stunning websites for over <span className="bold">5 years</span> as a <span className="blue">full stack developer</span></h6>
+                            <h1 className="bottom-36">{data.name.title}</h1>
+                            <h6 className="bottom-36">{data.name.subtitle}<span className="bold">5 {data.name.years}</span>{data.name.asA}<span className="blue">full stack developer</span></h6>
                             <div className="button-container">
-                                <button className="button square-button-orange">Hire me</button>
-                                <button className="button square-button-transparent">Let´s chat!</button>
+                                <button className="button square-button-orange">{data.name.hireMe}</button>
+                                <button className="button square-button-transparent">{data.name.github} <NorthIcon /></button>
                             </div>
                             <div className="info-title-block">
                                 <div>
                                     <h4>+100</h4>
-                                    <p className="body">Happy clients</p>
+                                    <p className="body">{data.name.happyClients}</p>
                                 </div>
                                 <div>
                                     <h4>300</h4>
-                                    <p className="body">Projects done</p>
+                                    <p className="body">{data.name.projectsDone}</p>
                                 </div>
                                 <div>
-                                    <h4>4</h4>
-                                    <p className="body">Frameworks</p>
+                                    <h4>+4 {data.name.years}</h4>
+                                    <p className="body">{data.name.yearsExperience}</p>
                                 </div>
                             </div>
                         </div>
@@ -124,33 +125,33 @@ const Main = (props) => {
                     <div className="stats-block">
                         <div className="inner-stats-block-1">
                             <div>
-                                <h4 className="white margin-17">Project statistics <br /> 2022</h4>
-                                <button className="button square-button-blue">Learn more</button>
+                                <h4 className="white margin-17">{data.statistics.title}<br /> 2022</h4>
+                                <button className="button square-button-blue">{data.statistics.learnMore}</button>
                             </div>
                             <div>
                                 <div className="inner-stats-data">
-                                    <p className="body white">Web development</p>
+                                    <p className="body white">{data.statistics.webDev}</p>
                                     <p className="caption white">195</p>
                                 </div>
                                 <div className="inner-stats-data">
-                                    <p className="body white">Software development</p>
+                                    <p className="body white">{data.statistics.softwareDev}</p>
                                     <p className="caption white">195</p>
                                 </div>
                                 <div className="inner-stats-data">
-                                    <p className="body white">App development</p>
+                                    <p className="body white">{data.statistics.appDev}</p>
                                     <p className="caption white">195</p>
                                 </div>
                             </div>
                         </div>
                         <div className="inner-stats-block-2">
                             <div className="about-me-container">
-                                <h2>about</h2>
-                                <h1>Me.</h1>
+                                <h2>{data.statistics.about}</h2>
+                                <h1>{data.statistics.me}.</h1>
                             </div>
                             <div className="about-me-description-container">
-                                <h4 className="white margin-bottom-16">I´m Maria, <br />I can give you a recognizable digital identity!</h4>
+                                <h4 className="white margin-bottom-16">{data.statistics.title1} <br />{data.statistics.title2}</h4>
                                 <p className="body white">
-                                    I work hard every single day to grow both as a developer and a professional. I have top-notch knowledge of both frontend and backend. My number one priority is always my clients satisfaction, and this is why I work with dedication and motivation to deliver high quality, aesthetically pleasing, responsive websites with optimized code, high accesibility, and speed. I never consider a job finished until the project exceeds my clients expectations!
+                                {data.statistics.text}
                                 </p>
                                 <div className="icon-container">
                                     <FaGithub className="white"/>
@@ -166,8 +167,8 @@ const Main = (props) => {
                         <img src={BlueRectangle} className="projects-blue-rectangle" alt="blue rectangle" />
                         <img src={DoubleOrangeCircle} className="projects-orange-circle" alt="blue rectangle" />
                         <div className="center-div">
-                            <h2>my awesome</h2>
-                            <h1>projects.</h1>
+                            <h2>{data.projects.title1}</h2>
+                            <h1>{data.projects.title2}.</h1>
                         </div>
                         <div className="project-blocks">
                             <img src={ManageDesktopImg} />
@@ -176,7 +177,7 @@ const Main = (props) => {
                             <img src={ManageDesktopImg} />
                             <img src={ManageDesktopImg} />
                         </div>
-                        <button className="button square-button">Load more</button>
+                        <button className="button square-button">{data.projects.loadMore}</button>
                     </div>
                     <div className="light-square-block">
                         <div className="skills-block">
@@ -195,11 +196,11 @@ const Main = (props) => {
                             </div>
                             <div className="skills-text-block">
                                 <div className="center-div">
-                                    <h2>my all time</h2>
-                                    <h1>Advantage.</h1>
+                                    <h2>{data.about.title}</h2>
+                                    <h1>{data.about.title2}.</h1>
                                 </div>
                                 <h6>
-                                    I am also well-versed in many other frameworks and languages but these ones are my favourites! Of course I also know many other neccessary webdevelopment language to their best!
+                                    {data.about.text}
                                 </h6>
                                 <img src={ThinRectangle} alt="thin blue rectangle" />
                             </div>
@@ -207,41 +208,41 @@ const Main = (props) => {
                         <div className="education-block">
                             <img src={TripleBlueCircle} className="triple-blue-circle"/>
                             <div className="center-div">
-                                <h2>professional</h2>
-                                <h1>Education.</h1>
+                                <h2>{data.education.professional}</h2>
+                                <h1>{data.education.education}.</h1>
                             </div>
                             <div className="timeline-container">
                                 <div className="timeline-col">
                                     <h5>2018</h5>
                                     <div>
-                                        <h4>Frontend Development</h4>
-                                        <p className="body">Digital House</p>
+                                        <h4>{data.education.frontendDev}</h4>
+                                        <p className="body">{data.education.digitalHouse}</p>
                                     </div>
                                     <div>
-                                        <h4>Backend Development</h4>
-                                        <p className="body">Digital House</p>
+                                        <h4>{data.education.backendDev}</h4>
+                                        <p className="body">{data.education.digitalHouse}</p>
                                     </div>
                                 </div>
                                 <div className="timeline-col">
                                     <h5>2019-2021</h5>
                                     <div>
-                                        <h4>Learn React</h4>
-                                        <p className="body">Codecadamy</p>
+                                        <h4>{data.education.learnReact}</h4>
+                                        <p className="body">{data.education.codecadamy}</p>
                                     </div>
                                     <div>
-                                        <h4>Create an advanced Web App with React and Redux</h4>
-                                        <p className="body">Codecadamy</p>
+                                        <h4>{data.education.create}</h4>
+                                        <p className="body">{data.education.codecadamy}</p>
                                     </div>
                                 </div>
                                 <div className="timeline-col">
                                     <h5>2022</h5>
                                     <div>
-                                        <h4>Google Analytics for Beginners</h4>
-                                        <p className="body">Google</p>
+                                        <h4>{data.education.googleAnalytics}</h4>
+                                        <p className="body">{data.education.google}</p>
                                     </div>
                                     <div>
-                                        <h4>Bootstrap</h4>
-                                        <p className="body">Codecadamy</p>
+                                        <h4>{data.education.bootstrap}</h4>
+                                        <p className="body">{data.education.codecadamy}</p>
                                     </div>
                                 </div>
                             </div>
@@ -255,9 +256,8 @@ const Main = (props) => {
                     <div className="contact-container">
                         <div className="get-in-touch-block">
                             <div className="get-in-touch-title">
-                                <h3>Get in touch!</h3>
-                                <p className="body">Fill up the form and I will get back to you within
-                                    the next 24 hours.</p>
+                                <h3>{data.contact.title}!</h3>
+                                <p className="body">{data.contact.subtitle}.</p>
                             </div>
                             <div className="get-in-touch-numbers">
                                 <span>
@@ -274,70 +274,70 @@ const Main = (props) => {
                             <form>
                                 <div className="form-first-section">
                                     <div className="input-container">
-                                        <label for="firstName">First Name</label>
+                                        <label for="firstName">{data.contact.firstName}</label>
                                         <input type="text" id="firstName" placeholder="John" />
                                     </div>
                                     <div className="input-container">
-                                        <label for="lastName">Last Name</label>
+                                        <label for="lastName">{data.contact.lastName}</label>
                                         <input type="text" id="lastName" placeholder="Doe" />
                                     </div>
                                     <div className="input-container">
-                                        <label for="mail">Mail</label>
+                                        <label for="mail">{data.contact.mail}</label>
                                         <input type="text" id="mail" placeholder="john@doe.com" />
                                     </div>
                                     <div className="input-container">
-                                        <label for="phone">Phone</label>
+                                        <label for="phone">{data.contact.phone}</label>
                                         <input type="text" id="phone" placeholder="+54 9 11 4176-6805" />
                                     </div>
                                 </div>
                                 <div className="form-second-section">
-                                    <h6>What service do you need?</h6>
+                                    <h6>{data.contact.whichService}</h6>
                                     <div className="radio-container">
                                         <div className="radio">
                                             <input type="radio" id="fullWebsite" name="service-type" value="fullWebsite" />
-                                            <label for="fullWebsite">Full Website</label>
+                                            <label for="fullWebsite">{data.contact.fullWebsite}</label>
                                         </div>
                                         <div className="radio">
                                             <input type="radio" id="designCode" name="service-type" value="designCode" />
-                                            <label for="designCode">Design to code</label>
+                                            <label for="designCode">{data.contact.designCode}</label>
                                         </div>
                                         <div className="radio">
                                             <input type="radio" id="desktopMobile" name="service-type" value="desktopMobile" />
-                                            <label for="desktopMobile">Desktop to mobile</label>
+                                            <label for="desktopMobile">{data.contact.desktop}</label>
                                         </div>
                                         <div className="radio">
                                             <input type="radio" id="singlePage" name="service-type" value="singlePage" />
-                                            <label for="singlePage">Single page</label>
+                                            <label for="singlePage">{data.contact.singlePage}</label>
                                         </div>
                                         <div className="radio">
                                             <input type="radio" id="htmlTemplate" name="service-type" value="htmlTemplate" />
-                                            <label for="htmlTemplate">HTML email template</label>
+                                            <label for="htmlTemplate">{data.contact.html}</label>
                                         </div>
                                         <div className="radio">
                                             <input type="radio" id="redesign" name="service-type" value="redesign" />
-                                            <label for="redesign">Website Redesign</label>
+                                            <label for="redesign">{data.contact.redesign}</label>
                                         </div>
                                         <div className="radio">
                                             <input type="radio" id="other" name="service-type" value="other" />
-                                            <label for="other">Other</label>
+                                            <label for="other">{data.contact.other}</label>
                                         </div>
                                     </div>
                                 </div>
                                 <div className="form-third-section">
                                     <div className="input-container">
-                                        <label for="message">Message</label>
+                                        <label for="message">{data.contact.message}</label>
                                         <textarea rows="3" id="message" placeholder="Hello!" />
                                     </div>
                                 </div>
                                 <div className="form-button-container">
-                                    <button className="form-button">Send Message</button>
+                                    <button className="form-button">{data.contact.sendMessage}</button>
                                 </div>
 
                             </form>
                         </div>
                     </div>
                     <div className="credits-container">
-                        <h6>Designed with much ❤️ by UI Rocket</h6>
+                        <h6>{data.footer.designed} ❤️ {data.footer.designed2}</h6>
                     </div>
                 </div>
             </div>

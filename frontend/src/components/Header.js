@@ -3,7 +3,8 @@ import React , { useState , useEffect, useRef} from 'react';
 import '../styles/main.scss'
 import LinearProgress from '@material-ui/core/LinearProgress';
 
-const Header = () => {
+const Header = (props) => {
+    const {text} = props
     const [progress, setProgress] = useState(0);
     const [scrolling, setScrolling] = useState(false);
     const [height, setHeight] = useState(0)
@@ -43,13 +44,13 @@ const Header = () => {
                     <div className="header-container">
                         <h4>Maria<span className="orange-color">.</span></h4>
                         <ul>
-                            <li className="menu">Home</li>
-                            <li className="menu">Projects</li>
-                            <li className="menu">About me</li>
-                            <li className="menu">Projects</li>
-                            <li className="menu">Projects</li>
+                            <li className="menu">{text.home}</li>
+                            <li className="menu">{text.projects}</li>
+                            <li className="menu">{text.aboutMe}</li>
+                            <li className="menu">{text.getInTouch}</li>
+                            <li className="menu">{text.projects}</li>
                         </ul>
-                        <button className="button square-button">Let´s chat!</button>
+                        <button className="button square-button">{text.letsChat}</button>
                     </div>
                 </div>
        {/*  <LinearProgress className={scrolling === false ? 'progress' : 'hidden'} variant="determinate" value={progress} /> */}
