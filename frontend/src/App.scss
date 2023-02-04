@@ -1,3 +1,7 @@
+@function toRem($value) {
+    $remValue: ($value / 21) + rem; 
+    @return $remValue;
+}
 
 .languageScreen {
     width:100%;
@@ -6,6 +10,10 @@
     background-size: cover;
     background-repeat:repeat-y;
     background-attachment:fixed;
+}
+
+.black-layer {
+    background-color: #FAFAFA;
 }
 
 
@@ -30,6 +38,9 @@
         font-family: 'Roboto';
         font-display: auto;
     }
+    img {
+        margin-bottom: 2rem;
+    }
 }
 
 .flagContainer:hover {
@@ -42,10 +53,10 @@
 }
 
 .flag {
-    border-radius:50%;
+    width: toRem(224);
+    height: toRem(224);
+    border-radius:56px;
     transition:all 200ms ease-in;
-    width:150px;
-    height:150px;
     object-fit:cover;
     cursor:pointer;
 }

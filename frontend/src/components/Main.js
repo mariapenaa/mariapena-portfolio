@@ -103,7 +103,7 @@ const Main = (props) => {
                                 <button className="button square-button-orange">{data.name.hireMe}</button>
                                 <button className="button square-button-transparent">{data.name.github} <NorthIcon /></button>
                             </div>
-                            <div className="info-title-block">
+                            <div className="info-title-block only-wide">
                                 <div>
                                     <h4>+100</h4>
                                     <p className="body">{data.name.happyClients}</p>
@@ -120,9 +120,23 @@ const Main = (props) => {
                         </div>
                         <div className="profile-square">
                                 <img src={profilePic}></img>
+                        </div>
+                        <div className="info-title-block only-mobile">
+                                <div>
+                                    <h4>+100</h4>
+                                    <p className="body">{data.name.happyClients}</p>
+                                </div>
+                                <div>
+                                    <h4>300</h4>
+                                    <p className="body">{data.name.projectsDone}</p>
+                                </div>
+                                <div>
+                                    <h4>+4 {data.name.years}</h4>
+                                    <p className="body">{data.name.yearsExperience}</p>
+                                </div>
                             </div>
                     </div>
-                    <div className="stats-block">
+                    <div className="stats-block" id="aboutMe">
                         <div className="inner-stats-block-1">
                             <div>
                                 <h4 className="white margin-17">{data.statistics.title}<br /> 2022</h4>
@@ -163,7 +177,7 @@ const Main = (props) => {
                             <img className="first-orange-circle" src={Circle} />
                         </div>
                     </div>
-                    <div className="projects-block">
+                    <div className="projects-block" id="projects">
                         <img src={BlueRectangle} className="projects-blue-rectangle" alt="blue rectangle" />
                         <img src={DoubleOrangeCircle} className="projects-orange-circle" alt="blue rectangle" />
                         <div className="center-div">
@@ -180,7 +194,7 @@ const Main = (props) => {
                         <button className="button square-button">{data.projects.loadMore}</button>
                     </div>
                     <div className="light-square-block">
-                        <div className="skills-block">
+                        <div className="skills-block" id="skills">
                             <div className="skills-grid">
                                 {skills.map((skill, index)=>{
                                     return <div key={index} className="black-squares-block">
@@ -205,7 +219,7 @@ const Main = (props) => {
                                 <img src={ThinRectangle} alt="thin blue rectangle" />
                             </div>
                         </div>
-                        <div className="education-block">
+                        <div className="education-block" id="education">
                             <img src={TripleBlueCircle} className="triple-blue-circle"/>
                             <div className="center-div">
                                 <h2>{data.education.professional}</h2>
@@ -248,12 +262,12 @@ const Main = (props) => {
                             </div>
                         </div>
                     </div>
-                    <div className="review-container">
+                    <div className="review-container" id="review">
                         <img src={QuoteBlue} alt="blue quote" className="blue-quote" />
                         <img src={QuoteOrange} alt="orange quote" className="orange-quote" />
                         <Carrousel />
                     </div>  
-                    <div className="contact-container">
+                    <div className="contact-container" id="contact">
                         <div className="get-in-touch-block">
                             <div className="get-in-touch-title">
                                 <h3>{data.contact.title}!</h3>

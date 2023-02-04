@@ -1,7 +1,9 @@
 @function toRem($value) {
-    $remValue: ($value / 16) + rem; 
+    $remValue: ($value / 21) + rem; 
     @return $remValue;
 }
+
+
 
 @mixin text($weight:500, $size:18, $height:24) {
     font-family: 'Helvetica Neue';
@@ -78,4 +80,94 @@ h1 {
 .button-small {
     @include text(500, 14, 17);
     letter-spacing: toRem(0.25);
+}
+
+
+
+@media only screen and (max-width: 1536px) {
+    h1 {
+        font-size: 3rem;
+        line-height: 3.5rem;
+    }
+}
+
+@media only screen and (max-width: 1366px) {
+    h4 {
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+    }
+}
+
+
+@media only screen and (max-width: 1024px) {
+    h1 {
+        font-size: 3.1rem;
+        line-height: 3.5rem;
+    }
+
+    h4 {
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+    }
+
+    .body {
+        font-size: 0.8rem;
+    }
+
+    h6 {
+        font-size: 0.8rem;
+    }
+
+    h5 {
+        font-size:1rem;
+    }
+}
+
+@media only screen and (max-width: 962px) {
+    h1 {
+        font-size: 2.5rem;
+        line-height: 3rem;
+    }
+
+    h4 {
+        font-size: 0.9rem;
+        line-height: 1.2rem;
+    }
+
+    .body {
+        font-size: 0.7rem;
+    }
+
+    
+}
+
+
+@media only screen and (max-width: 767px) {
+    h1 {
+        font-size: 2.4rem;
+        line-height: 2.8rem;
+    } 
+}
+
+@media only screen and (max-width: 601px) {
+    h4 {
+        font-size: 1.1rem;
+    }
+
+    h1 {
+        font-size: 2.3rem;
+    }
+}
+
+
+@media only screen and (max-width: 469px) {
+    h1 {
+        font-size: 1.6rem;
+        line-height: 2rem;
+    }
+
+    h5 {
+        font-size: 1rem;
+        line-height: 1.4rem;
+    }
 }

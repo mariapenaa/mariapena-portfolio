@@ -130,7 +130,9 @@ export  const text = [
         header: {
             home:'home',
             projects:'projects',
+            skills:'skills',
             aboutMe:'about me',
+            education:'education',
             getInTouch:'get in touch',
             happyClients:'Happy clients',
             letsChat:'Let´s chat',
@@ -156,7 +158,7 @@ export  const text = [
             yearsExperience:'de experiencia'
         },
         statistics:{
-            title:'estadísticas de proyectos 2022',
+            title:'mis estadísticas de',
             learnMore:'descubrir más',
             webDev:'desarrollo web',
             softwareDev:'desarrollo de software',
@@ -272,7 +274,9 @@ export  const text = [
         header: {
             home:'home',
             projects:'proyectos',
+            skills:'habilidades',
             aboutMe:'sobre me',
+            education:'educatión',
             getInTouch:'contactémonos',
             happyClients:'Clientes felices',
             letsChat:'Hablemos',

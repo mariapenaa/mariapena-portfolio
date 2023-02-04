@@ -39,11 +39,11 @@ function App() {
             <div className='languageContainer'>
               <div className="flagContainer">
                 <img onClick={()=>toggleLanguage('english')} src={usa} alt="argentina flag" className="flag" />
-                <p>English</p>
+                <h3>English</h3>
               </div>
               <div className="flagContainer">
                 <img onClick={()=>toggleLanguage('spanish')} src={argentina} alt="argentina flag" className="flag" />
-                <p>Spanish</p>
+                <h3>Spanish</h3>
               </div>
             </div>
           </div>
