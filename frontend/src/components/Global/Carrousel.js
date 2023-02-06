@@ -49,16 +49,29 @@ const steps = [
 const Carrousel = (props) => {
     const theme = useTheme();
     const [activeStep, setActiveStep] = React.useState(0);
+    const [slideAnimation, setSlideAnimation] = React.useState(false);
+    const [slideSide, setSlideSide] = React.useState('slide-in-right');
     const maxSteps = steps.length;
 
     const handleNext = () => {
-        console.log(activeStep)
+        console.log('hey')
         if(activeStep < maxSteps - 1){
             setActiveStep((prevActiveStep) => prevActiveStep + 1);
         }else{
             setActiveStep(0);
         }
+
+        handleSlide('right')
+
     };
+
+    const handleSlide = (side) => {
+        setSlideSide('slide-in-'+ side)
+        setSlideAnimation(true)
+        setTimeout(() => {
+            setSlideAnimation(false)
+        }, 500);
+    }
 
     const handleBack = () => {
         if(activeStep > 0){
@@ -66,12 +79,13 @@ const Carrousel = (props) => {
         }else{
             setActiveStep(maxSteps - 1)
         }
+        handleSlide('left')
     };
 
     return (
         <div className="slider-container">
             <KeyboardArrowLeft className="arrow" onClick={handleBack}/>
-            <div className="slider-text">
+            <div className={slideAnimation ? "slider-text " + slideSide : "slider-text"}>
                 <div className="star-container">
                     {steps[activeStep].stars.map((star, idx)=>{
                         return (

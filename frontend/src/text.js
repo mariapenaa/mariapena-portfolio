@@ -16,9 +16,9 @@ export  const text = [
         statistics:{
             title:'project statistics',
             learnMore:'learn more',
-            webDev:'web development',
-            softwareDev:'software development',
-            appDev:'app development',
+            webDev:'github contributions',
+            softwareDev:'hours of code',
+            appDev:'Upwork earnings',
             about:'about',
             me:'me',
             title1:'I´m Maria',
@@ -29,25 +29,26 @@ export  const text = [
             title1: 'my awesome',
             title2:'projects',
             loadMore:'load more',
+            hideMore:'hide more',
             arr: [
                 {
                     key:'manage',
                     title:'Manage landing page',
-                    tools:'ReactJS, HTML, CSS, JavaScript',
+                    tools:'ReactJS',
                     description: 'Fully responsive landing page created for Manage using ReactJS, HTML, CSS and JavaScript. Design and files were provided by frontendmentor.io',
                     img:''
                 },
                 {
                     key:'comment',
                     title:'Interactive comment section',
-                    tools:'ReactJS, HTML, CSS, JavaScript, Material UI Firebase',
+                    tools:'ReactJS, Material UI, Firebase',
                     description: 'Fully responsive web app with register and login, that allows users to interact by commenting, upvoting other comments, and replying to them. I used Firebase user authentication and database storage.',
                     img:''
                 },
                 {
                     key:'sunnyside',
                     title:'Sunnyside landing page',
-                    tools:'ReactJS, HTML, CSS, Material UI, JavaScript',
+                    tools:'ReactJS, Material UI',
                     description: 'Fully responsive landing page created for Sunnyside using ReactJS. Design and files were provided by frontendmentor.io',
                     img:''
                 },
@@ -55,14 +56,14 @@ export  const text = [
                 {
                     key:'space',
                     title:'Space tourism website',
-                    tools:'ReactJS, HTML, CSS, Material UI JavaScript',
+                    tools:'ReactJS, Material UI',
                     description: 'Fully responsive multipage website page built with ReactJS. React router was used for navigation, design and files were provided by frontendmentor.io',
                     img:''
                 },
                 {
                     key:'ip',
                     title:'Ip address tracker',
-                    tools:'ReactJS, HTML, CSS, JavaScript, APIs',
+                    tools:'ReactJS, APIs',
                     description: 'Fully responsive webapp page built with ReactJS. I used the IP Geolocation API by IPify, and the map is from Leaflet. The webapp allows users to write an IP address or a website, and the app will find the location of either.',
                     img:''
                 },
@@ -73,13 +74,20 @@ export  const text = [
                     description: 'CRUD Backend project in which registered users can upload images of makeup with a description, comment on other posts, see the top commented posts, like other posts, and see users profiles as well as edit their own. ',
                     img:''
                 },
+                {
+                    key:'portfolio',
+                    title:'This website!',
+                    tools:'ReactJS, NodeJS, Material Design, Animista',
+                    description: 'Fully responsive webpage built with React, pixel-perfect copy of a Figma design by Rocket UI.',
+                    img:''
+                },
 
             ]
         },
         about: {
             title: 'my all time',
             title2:'advantage',
-            text:'I am also well-versed in many other frameworks and languages but these ones are my favourites! Of course I also know many other neccessary webdevelopment language to their best!',
+            text:'These are the frameworks and libraries which I am most skilled at, but I am also constantly working on learning new tools for both frontend and backend, such as React Native, Nest Js, and many more!',
             projects:'projects',
             years:'years',
         },
@@ -93,7 +101,7 @@ export  const text = [
             codecadamy:'Codecadamy',
             create:'Create an advanced Web App with React and Redux',
             googleAnalytics:'Google Analytics for Beginners',
-            bootstrap:'Bootstrap',
+            bootstrap:'Advanced Google Analytics',
             google:'Google'
         },
         reviews:[
@@ -112,7 +120,7 @@ export  const text = [
             title:'get in touch',
             lastName:'last name',
             phone:'phone',
-            subtitle:'Fill up the form and I will get back to you withinthe next 24 hours.',
+            subtitle:'Fill up the form and I will get back to you within the next 24 hours.',
             firstName:'first name',
             mail:'Mail',
             message:'message',
@@ -160,9 +168,9 @@ export  const text = [
         statistics:{
             title:'mis estadísticas de',
             learnMore:'descubrir más',
-            webDev:'desarrollo web',
-            softwareDev:'desarrollo de software',
-            appDev:'desarrollo de aplicaciones',
+            webDev:'contribuciones de github',
+            softwareDev:'horas de código',
+            appDev:'ganancias de Upwork',
             about:'sobre',
             me:'mi',
             title1:'Soy Maria',
@@ -173,25 +181,26 @@ export  const text = [
             title1: 'mis increíbles',
             title2:'proyectos',
             loadMore:'cargar más',
+            hideMore:'ocultar más',
             arr: [
                 {
                     key:'manage',
                     title:'Manage landing page',
-                    tools:'ReactJS, HTML, CSS, JavaScript',
+                    tools:'ReactJS',
                     description: 'Fully responsive landing page created for Manage using ReactJS, HTML, CSS and JavaScript. Design and files were provided by frontendmentor.io',
                     img:''
                 },
                 {
                     key:'comment',
                     title:'Interactive comment section',
-                    tools:'ReactJS, HTML, CSS, JavaScript, Material UI Firebase',
+                    tools:'ReactJS, Material UI, Firebase',
                     description: 'Fully responsive web app with register and login, that allows users to interact by commenting, upvoting other comments, and replying to them. I used Firebase user authentication and database storage.',
                     img:''
                 },
                 {
                     key:'sunnyside',
                     title:'Sunnyside landing page',
-                    tools:'ReactJS, HTML, CSS, Material UI, JavaScript',
+                    tools:'ReactJS, Material UI',
                     description: 'Fully responsive landing page created for Sunnyside using ReactJS. Design and files were provided by frontendmentor.io',
                     img:''
                 },
@@ -199,14 +208,14 @@ export  const text = [
                 {
                     key:'space',
                     title:'Space tourism website',
-                    tools:'ReactJS, HTML, CSS, Material UI JavaScript',
+                    tools:'ReactJS, Material UI',
                     description: 'Fully responsive multipage website page built with ReactJS. React router was used for navigation, design and files were provided by frontendmentor.io',
                     img:''
                 },
                 {
                     key:'ip',
                     title:'Ip address tracker',
-                    tools:'ReactJS, HTML, CSS, JavaScript, APIs',
+                    tools:'ReactJS, APIs',
                     description: 'Fully responsive webapp page built with ReactJS. I used the IP Geolocation API by IPify, and the map is from Leaflet. The webapp allows users to write an IP address or a website, and the app will find the location of either.',
                     img:''
                 },
@@ -217,13 +226,20 @@ export  const text = [
                     description: 'CRUD Backend project in which registered users can upload images of makeup with a description, comment on other posts, see the top commented posts, like other posts, and see users profiles as well as edit their own. ',
                     img:''
                 },
+                {
+                    key:'portfolio',
+                    title:'This website!',
+                    tools:'ReactJS, NodeJS, Material Design, Animista',
+                    description: 'Fully responsive webpage built with React, pixel-perfect copy of a Figma design by Rocket UI.',
+                    img:''
+                },
 
             ]
         },
         about: {
             title: 'en qué me',
             title2:'destaco',
-            text:'También tengo conocimientos de otros frameworks e idiomas, pero estos son mis favoritos!',
+            text:'Estos son las frameworks y librerías con los que mejor trabajo, pero estoy constantemente aprendiendo nuevas habilidades tanto para frontend como para backend, como React Native, Nest Js, y muchos más!',
             projects:'proyectos',
             years:'años',
         },
@@ -237,7 +253,7 @@ export  const text = [
             codecadamy:'Codecadamy',
             create:'Crea una Web App avanzada con React y Redux.',
             googleAnalytics:'Google Analytics para principiantes',
-            bootstrap:'Bootstrap',
+            bootstrap:'Google Analytics para avanzados',
             google:'Google'
         },
         reviews:[

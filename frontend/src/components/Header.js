@@ -51,9 +51,8 @@ const Header = (props) => {
                             <li className="menu"><a href="#skills">{text.skills}</a></li>
                             <li className="menu"><a href="#education">{text.education}</a></li>
                             <li className="menu"><a href="#review">{text.happyClients}</a></li>
-                            <li className="menu"><a href="#contact">{text.letsChat}</a></li>
                         </ul>
-                        <button className="button square-button desktop-header">{text.letsChat}</button>
+                        <button className="button square-button desktop-header"><a href="#contact">{text.letsChat}</a></button>
                         <MenuIcon className="menu-icon" onClick={e => setShowHeader(!showHeader) }></MenuIcon>
                     </div>
                     {showHeader ? 
@@ -64,7 +63,6 @@ const Header = (props) => {
                                 <li className="menu">{text.skills}</li>
                                 <li className="menu">{text.education}</li>
                                 <li className="menu">{text.getInTouch}</li>
-                                <li className="menu">{text.letsChat}</li>
                             </ul>
                         </div> : <span></span>
                     }
