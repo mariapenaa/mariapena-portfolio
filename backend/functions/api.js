@@ -58,7 +58,6 @@ if (error) {
     
     contactEmail.sendMail(mail, (error) => {
       if (error) {
-        console.log(error)
         res.json({ status: "failed" });
         
       } else {
