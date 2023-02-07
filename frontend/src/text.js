@@ -132,7 +132,10 @@ export  const text = [
             html:'html email template',
             redesign:'website redesign',
             other:'other',
-            sendMessage:'send message'
+            sendMessage:'send message',
+            sending:'sending...',
+            error:'Error',
+            errorMessage:'hubo un error, profavor intente más tarde'
 
         },
         header: {
@@ -284,7 +287,10 @@ export  const text = [
             html:'template HTML para mail',
             redesign:'rediseño web',
             other:'otro',
-            sendMessage:'enviar mensaje'
+            sendMessage:'enviar mensaje',
+            sending:'enviando...',
+            error:'Error',
+            errorMessage:'please try again later'
 
         },
         header: {

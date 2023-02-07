@@ -39,6 +39,8 @@ import NorthIcon from '@mui/icons-material/NorthEast'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
+import Contact from '../components/Contact'
+
 function getWindowDimensions() {
     const { innerWidth: width, innerHeight: height } = window;
     return {
@@ -461,69 +463,7 @@ const Main = (props) => {
                             </div>
                         </div>
                         <div className="contact-form-block">
-                            <form>
-                                <div className="form-first-section">
-                                    <div className="input-container">
-                                        <label htmlFor="firstName">{data.contact.firstName}</label>
-                                        <input type="text" id="firstName" placeholder="John" />
-                                    </div>
-                                    <div className="input-container">
-                                        <label htmlFor="lastName">{data.contact.lastName}</label>
-                                        <input type="text" id="lastName" placeholder="Doe" />
-                                    </div>
-                                    <div className="input-container">
-                                        <label htmlFor="mail">{data.contact.mail}</label>
-                                        <input type="text" id="mail" placeholder="john@doe.com" />
-                                    </div>
-                                    <div className="input-container">
-                                        <label htmlFor="phone">{data.contact.phone}</label>
-                                        <input type="text" id="phone" placeholder="+54 9 11 4176-6805" />
-                                    </div>
-                                </div>
-                                <div className="form-second-section">
-                                    <h6>{data.contact.whichService}</h6>
-                                    <div className="radio-container">
-                                        <div className="radio">
-                                            <input type="radio" id="fullWebsite" name="service-type" value="fullWebsite" />
-                                            <label htmlFor="fullWebsite">{data.contact.fullWebsite}</label>
-                                        </div>
-                                        <div className="radio">
-                                            <input type="radio" id="designCode" name="service-type" value="designCode" />
-                                            <label htmlFor="designCode">{data.contact.designCode}</label>
-                                        </div>
-                                        <div className="radio">
-                                            <input type="radio" id="desktopMobile" name="service-type" value="desktopMobile" />
-                                            <label htmlFor="desktopMobile">{data.contact.desktop}</label>
-                                        </div>
-                                        <div className="radio">
-                                            <input type="radio" id="singlePage" name="service-type" value="singlePage" />
-                                            <label htmlFor="singlePage">{data.contact.singlePage}</label>
-                                        </div>
-                                        <div className="radio">
-                                            <input type="radio" id="htmlTemplate" name="service-type" value="htmlTemplate" />
-                                            <label htmlFor="htmlTemplate">{data.contact.html}</label>
-                                        </div>
-                                        <div className="radio">
-                                            <input type="radio" id="redesign" name="service-type" value="redesign" />
-                                            <label htmlFor="redesign">{data.contact.redesign}</label>
-                                        </div>
-                                        <div className="radio">
-                                            <input type="radio" id="other" name="service-type" value="other" />
-                                            <label htmlFor="other">{data.contact.other}</label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="form-third-section">
-                                    <div className="input-container">
-                                        <label htmlFor="message">{data.contact.message}</label>
-                                        <textarea rows="3" id="message" placeholder="Hello!" />
-                                    </div>
-                                </div>
-                                <div className="form-button-container">
-                                    <button className="form-button">{data.contact.sendMessage}</button>
-                                </div>
-
-                            </form>
+                            <Contact data={data}/>
                         </div>
                     </div>
                     <div className="credits-container">
