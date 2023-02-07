@@ -45,15 +45,13 @@ if (error) {
         console.log("Ready to Send");
       }
     });
-    const name = req.body.name;
-    const email = req.body.email;
-    const subject = req.body.subject;
-    const message = req.body.text; 
+    const {firstName, lastName, email, phone, service, message} = req.body
+
     const mail = {
-      from: name,
-      to: "mpena@udesa.edu.ar",
-      subject: subject,
-      html: `<p>Name: ${name}</p><p>Email: ${email}</p><p>Message: ${message}</p>`,
+      from: email,
+      to: "mariapenadev@gmail.com",
+      subject: service,
+      html: `<p>Name: ${firstName + ' '+lastName}</p><p>Email: ${email}</p><p>Phone: ${phone}</p><p>Message: ${message}</p>`,
     };
     
     contactEmail.sendMail(mail, (error) => {
