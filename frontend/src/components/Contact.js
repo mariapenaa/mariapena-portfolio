@@ -5,6 +5,7 @@ import axios from 'axios'
 import Alert from '@mui/material/Alert';
 import AlertTitle from '@mui/material/AlertTitle';
 import Stack from '@mui/material/Stack';
+import Collapse from '@mui/material/Collapse';
 
 import '../styles/main.scss'
 
@@ -19,11 +20,22 @@ const Contact = (props) => {
     const [email, setEmail] = useState('')
     const [phone, setPhone] = useState('')
     const [service, setService] = useState('')
+    const [openAlert, setOpenAlert] = useState(false)
     const [content, setContent] = useState('')
     const [lastName, setLastName] = useState('')
     const [error, setError] = useState(true)
+
+    const clearFields = () => {
+        setFirstName('')
+        setLastName('')
+        setEmail('')
+        setPhone('')
+        setService('')
+        setMessage('')
+    }
     
     const submitEmail = (e) => {
+        setSuccess(null)
         e.preventDefault()
         let data = {
             firstName,
@@ -41,10 +53,20 @@ const Contact = (props) => {
             }).then((response)=>{
             if (response.data.status === 'sent'){
                 setSuccess('success')
+                setOpenAlert(true)
                 setLoading(false)
+                clearFields()
+                setTimeout(() => {
+                    setOpenAlert(false)
+                }, 10000);
             }else if(response.data.status === 'failed'){
                 setSuccess('error')
+                setOpenAlert(false)
                 setLoading(false)
+                clearFields()
+                setTimeout(() => {
+                    setOpenAlert(false)
+                }, 10000);
             }
         })
     }
@@ -60,10 +82,21 @@ const Contact = (props) => {
 
     return (
         <form onChange={checkForm}>
-            <Alert severity={success!= null ? success : 'error'} className={success ===null ? "no-height" : "alert"}>
-                <AlertTitle>{data.contact.error}</AlertTitle>
-                {data.contact.errorMessage}
-            </Alert>
+            <Collapse in={openAlert}>
+                <Alert severity={success!= null ? success : 'error'} className='alert'>
+                    {success === 'success' ? 
+                        <React.Fragment>
+                            <AlertTitle>{data.contact.success}</AlertTitle>
+                            {data.contact.successMessage}
+                        </React.Fragment>
+                        :
+                        <React.Fragment>
+                            <AlertTitle>{data.contact.error}</AlertTitle>
+                            {data.contact.errorMessage}
+                        </React.Fragment>
+                    }
+                </Alert>
+            </Collapse>
             <div className="form-first-section">
                 <div className="input-container">
                     <label htmlFor="firstName">{data.contact.firstName} *</label>

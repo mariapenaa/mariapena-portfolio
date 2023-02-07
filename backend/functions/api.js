@@ -31,8 +31,10 @@ if (error) {
   router.post("/contacto", (req, res) => {
 
     const contactEmail = nodemailer.createTransport({
-      host: "smtp.gmail.com",
-      port: 587,
+      service:'Zoho',
+      host: "smtp.zoho.com",
+      port: 465,
+      secure:true,
       auth: {
         user: process.env.MAIL_USER,
         pass:process.env.MAIL_PASSWORD,
@@ -48,7 +50,7 @@ if (error) {
     const {firstName, lastName, email, phone, service, message} = req.body
 
     const mail = {
-      from: email,
+      from:  '"Maria Peña" <maria@mariapenadev.com>',
       to: "mariapenadev@gmail.com",
       subject: service,
       html: `<p>Name: ${firstName + ' '+lastName}</p><p>Email: ${email}</p><p>Phone: ${phone}</p><p>Message: ${message}</p>`,
@@ -56,6 +58,7 @@ if (error) {
     
     contactEmail.sendMail(mail, (error) => {
       if (error) {
+        console.log(error)
         res.json({ status: "failed" });
         
       } else {

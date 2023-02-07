@@ -135,7 +135,9 @@ export  const text = [
             sendMessage:'send message',
             sending:'sending...',
             error:'Error',
-            errorMessage:'hubo un error, profavor intente más tarde'
+            success:'Success',
+            successMessage:'message sent succesfully',
+            errorMessage:'please try again later'
 
         },
         header: {
@@ -290,7 +292,9 @@ export  const text = [
             sendMessage:'enviar mensaje',
             sending:'enviando...',
             error:'Error',
-            errorMessage:'please try again later'
+            errorMessage:'hubo un error, profavor intente más tarde',
+            success:'Éxito',
+            successMessage:'el mensaje fue enviado con éxito',
 
         },
         header: {
