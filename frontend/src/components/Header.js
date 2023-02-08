@@ -3,6 +3,7 @@ import React , { useState , useEffect, useRef} from 'react';
 import '../styles/main.scss'
 import LinearProgress from '@material-ui/core/LinearProgress';
 import MenuIcon from '@mui/icons-material/Menu'
+import Collapse from '@mui/material/Collapse';
 
 const Header = (props) => {
     const {text} = props;
@@ -55,17 +56,17 @@ const Header = (props) => {
                         <button className="button square-button desktop-header"><a href="#contact">{text.letsChat}</a></button>
                         <MenuIcon className="menu-icon" onClick={e => setShowHeader(!showHeader) }></MenuIcon>
                     </div>
-                    {showHeader ? 
+                    <Collapse in={showHeader}>
                         <div className="mobile-header" >
                             <ul>
-                                <li className="menu">{text.aboutMe}</li>
-                                <li className="menu">{text.projects}</li>
-                                <li className="menu">{text.skills}</li>
-                                <li className="menu">{text.education}</li>
-                                <li className="menu">{text.getInTouch}</li>
+                                <li className="menu" onClick={e => setShowHeader(!showHeader)}><a href="#aboutMe">{text.aboutMe}</a></li>
+                                <li className="menu" onClick={e => setShowHeader(!showHeader)}><a href="#projects">{text.projects}</a></li>
+                                <li className="menu" onClick={e => setShowHeader(!showHeader)}><a href="#skills">{text.skills}</a></li>
+                                <li className="menu" onClick={e => setShowHeader(!showHeader)}><a href="#education">{text.education}</a></li>
+                                <li className="menu" onClick={e => setShowHeader(!showHeader)}><a href="#review">{text.happyClients}</a></li>
                             </ul>
-                        </div> : <span></span>
-                    }
+                        </div>
+                    </Collapse>
                 </div>
        {/*  <LinearProgress className={scrolling === false ? 'progress' : 'hidden'} variant="determinate" value={progress} /> */}
         </React.Fragment>

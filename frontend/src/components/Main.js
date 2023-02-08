@@ -134,8 +134,8 @@ const Main = (props) => {
                             <h1 className="bottom-36" data-aos="fade-right">{data.name.title}</h1>
                             <h6 className="bottom-36" data-aos="fade-right" data-aos-delay="300">{data.name.subtitle}<span className="bold">4 {data.name.years}</span>{data.name.asA}<span className="blue">full stack developer</span></h6>
                             <div className="button-container">
-                                <button className="button square-button-orange">{data.name.hireMe}</button>
-                                <button className="button square-button-transparent">{data.name.github} <NorthIcon /></button>
+                                <button className="button square-button-orange"><a href="#contact">{data.name.hireMe}</a></button>
+                                <button className="button square-button-transparent"><a href="https://github.com/mariapenaa" target="_blank">{data.name.github} <NorthIcon /></a></button>
                             </div>
                             <div className="info-title-block only-wide">
                                 <div>
@@ -467,7 +467,7 @@ const Main = (props) => {
                         </div>
                     </div>
                     <div className="credits-container">
-                        <h6 data-aos="fade-up">{data.footer.designed} ❤️ {data.footer.designed2}</h6>
+                        <h6>{data.footer.designed} ❤️ {data.footer.designed2}</h6>
                     </div>
                 </div>
             </div>

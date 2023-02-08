@@ -103,11 +103,17 @@ body {
     border:1.5px solid colors.$color-primary;
     background: colors.$color-primary;
     transition:all ease-in-out 200ms;
+    a {
+        color:white;
+    }
 }
 
 .square-button-orange:hover {
     color:colors.$color-primary;
     background: white;
+    a {
+        color:colors.$color-primary;
+    }
 }
 
 .square-button-transparent {
@@ -119,6 +125,9 @@ body {
 
 .square-button-transparent:hover {
     background-color:colors.$text-color-placeholder;
+    a {
+        color:white;
+    }
     color:white;
 }
 
@@ -1323,6 +1332,13 @@ body {
     .inner-stats-block-1 {
         flex-direction: column;
         div:first-child {
+            margin-bottom:0.5rem;
+        }
+    }
+
+    .button-container {
+        button:first-child {
+            margin-right:0rem;
             margin-bottom:0.5rem;
         }
     }
