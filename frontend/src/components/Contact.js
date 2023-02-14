@@ -9,6 +9,7 @@ import Collapse from '@mui/material/Collapse';
 
 import '../styles/main.scss'
 
+import ReactGA from 'react-ga4';
 
 const Contact = (props) => {
     const {data} = props;
