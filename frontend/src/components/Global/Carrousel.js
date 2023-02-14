@@ -16,6 +16,8 @@ import ProfileIcon from '@mui/icons-material/AccountCircle';
 
 import '../../styles/carrousel.scss'
 
+import ReactGA from 'react-ga4';
+
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 const steps = [
@@ -63,6 +65,11 @@ const Carrousel = (props) => {
 
         handleSlide('right')
 
+        ReactGA.event({
+            category: "arrow-click",
+            action: "next",
+        });
+
     };
 
     const handleSlide = (side) => {
@@ -80,6 +87,10 @@ const Carrousel = (props) => {
             setActiveStep(maxSteps - 1)
         }
         handleSlide('left')
+        ReactGA.event({
+            category: "arrow-click",
+            action: "back",
+        });
     };
 
     return (

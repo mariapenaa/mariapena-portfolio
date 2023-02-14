@@ -35,6 +35,10 @@ const Contact = (props) => {
     }
     
     const submitEmail = (e) => {
+        ReactGA.event({
+            category: "button-click",
+            action: "submit-email",
+        });
         setSuccess(null)
         e.preventDefault()
         let data = {
@@ -59,6 +63,10 @@ const Contact = (props) => {
                 setTimeout(() => {
                     setOpenAlert(false)
                 }, 10000);
+                ReactGA.event({
+                    category: "form-response",
+                    action: "success",
+                });
             }else if(response.data.status === 'failed'){
                 setSuccess('error')
                 setOpenAlert(true)
@@ -67,6 +75,10 @@ const Contact = (props) => {
                 setTimeout(() => {
                     setOpenAlert(false)
                 }, 10000);
+                ReactGA.event({
+                    category: "form-response",
+                    action: "failed",
+                });
             }
         })
     }
