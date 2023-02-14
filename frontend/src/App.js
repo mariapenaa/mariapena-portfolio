@@ -3,7 +3,7 @@ import React, {useState, useEffect} from 'react';
 import './App.scss'
 import argentina from './images/flags/argentina.png'
 import usa from './images/flags/usa.png'
-import ReactGA from 'react-ga';
+import ReactGA from 'react-ga4';
 import Main from './components/Main';
 
 const TRACKING_ID = "G-ELGJ0FNYFX"
@@ -20,7 +20,7 @@ function App() {
   }
 
   const setGA = () => {
-    ReactGA.pageview(window.location.pathname + window.location.search);
+    ReactGA.send({ hitType: "pageview", page:window.location.pathname + window.location.search });
   };
 
   useEffect(() => {
