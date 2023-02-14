@@ -56,7 +56,6 @@ const Carrousel = (props) => {
     const maxSteps = steps.length;
 
     const handleNext = () => {
-        console.log('hey')
         if(activeStep < maxSteps - 1){
             setActiveStep((prevActiveStep) => prevActiveStep + 1);
         }else{

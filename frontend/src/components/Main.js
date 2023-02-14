@@ -119,7 +119,6 @@ const Main = (props) => {
         function handleResize() {
             setWindowDimensions(getWindowDimensions());
         }
-        console.log(windowDimensions)
         window.addEventListener('resize', handleResize);
         return () => window.removeEventListener('resize', handleResize);
     }, []);
@@ -159,6 +158,7 @@ const Main = (props) => {
         });
     })
 
+
     const showMore = (()=>{
         ReactGA.event({
             category: "button-click",
@@ -181,8 +181,8 @@ const Main = (props) => {
                             <h1 className="bottom-36" data-aos="fade-right">{data.name.title}</h1>
                             <h6 className="bottom-36" data-aos="fade-right" data-aos-delay="300">{data.name.subtitle}<span className="bold">4 {data.name.years}</span>{data.name.asA}<span className="blue">full stack developer</span></h6>
                             <div className="button-container">
-                                <button className="button square-button-orange" onClick={hireMeClick}><a href="#contact">{data.name.hireMe}</a></button>
-                                <button className="button square-button-transparent" onClick={githubClick}><a href="https://github.com/mariapenaa" target="_blank">{data.name.github} <NorthIcon /></a></button>
+                                <button className="button square-button-orange" onClick={()=>hireMeClick()}><a href="#contact">{data.name.hireMe}</a></button>
+                                <button className="button square-button-transparent" onClick={()=>githubClick()}><a href="https://github.com/mariapenaa" target="_blank">{data.name.github} <NorthIcon /></a></button>
                             </div>
                             <div className="info-title-block only-wide">
                                 <div>
@@ -221,7 +221,7 @@ const Main = (props) => {
                         <div className="inner-stats-block-1">
                             <div>
                                 <h4 className="white margin-17">{data.statistics.title}<br /> 2022</h4>
-                                <button className="button square-button-blue" onClick={learnMoreClick}><a href="https://github.com/mariapenaa" target="_blank">{data.statistics.learnMore}</a></button>
+                                <button className="button square-button-blue" onClick={()=>learnMoreClick()}><a href="https://github.com/mariapenaa" target="_blank">{data.statistics.learnMore}</a></button>
                             </div>
                             <div>
                                 <div className="inner-stats-data">
@@ -249,10 +249,10 @@ const Main = (props) => {
                                 {data.statistics.text}
                                 </p>
                                 <div className="icon-container">
-                                    <a target="_blank" href="https://github.com/mariapenaa" onClick={linkClick('github')}><FaGithub className="white link-icon"/></a>
-                                    <a target="_blank" href="https://www.linkedin.com/in/maria-pena-dev/" onClick={linkClick('linkedin')}><FaLinkedinIn className="white link-icon"/></a>
-                                    <a target="_blank" href="https://www.frontendmentor.io/profile/mariapenaa" onClick={linkClick('frontend-mentor')}><SiFrontendmentor className="white link-icon"/></a>
-                                    <a target="_blank" href="https://www.upwork.com/freelancers/~01de3b625bc065ecf9" onClick={linkClick('upwork')}><SiUpwork className="white link-icon"/></a>
+                                    <a target="_blank" href="https://github.com/mariapenaa"onClick={()=>linkClick('github')}><FaGithub className="white link-icon"/></a>
+                                    <a target="_blank" href="https://www.linkedin.com/in/maria-pena-dev/" onClick={()=>linkClick('linkedin')}><FaLinkedinIn className="white link-icon"/></a>
+                                    <a target="_blank" href="https://www.frontendmentor.io/profile/mariapenaa" onClick={()=>linkClick('frontend-mentor')}><SiFrontendmentor className="white link-icon"/></a>
+                                    <a target="_blank" href="https://www.upwork.com/freelancers/~01de3b625bc065ecf9" onClick={()=>linkClick('upwork')}><SiUpwork className="white link-icon"/></a>
                                 </div>
                             </div>
                             <img className="first-orange-circle" alt="orange circle" src={Circle} />
@@ -266,7 +266,7 @@ const Main = (props) => {
                             <h1>{data.projects.title2}.</h1>
                         </div>
                         <div className="project-blocks">
-                            <div className="single-project-block" onClick={projectClick('space')} data-aos="fade-right">
+                            <div className="single-project-block" onClick={()=>projectClick('space')} data-aos="fade-right">
                                 <div className="project-img-cover">
                                     <div className="project-img-opacity"></div>
                                     <div>
@@ -287,7 +287,7 @@ const Main = (props) => {
                                 </div>
                                 <img src={SpaceDesktopImg} alt="space desktop screenshot" />
                             </div>
-                            <div  className="single-project-block" onClick={projectClick('comment-section')}  data-aos="fade-right">
+                            <div  className="single-project-block"  onClick={()=>projectClick('comment-section')} data-aos="fade-right">
                                 <div className="project-img-cover">
                                     <div className="project-img-opacity"></div>
                                     <div>
@@ -308,7 +308,7 @@ const Main = (props) => {
                                 </div>
                                 <img src={ComentDesktopImg} alt="website screenshot" />
                             </div>
-                            <div  className="single-project-block" onClick={projectClick('manage')}  data-aos="fade-left">  
+                            <div  className="single-project-block"  onClick={()=>projectClick('manage')}  data-aos="fade-left">  
                                 <div className="project-img-cover">
                                     <div className="project-img-opacity"></div>
                                     <div>
@@ -329,7 +329,7 @@ const Main = (props) => {
                                 </div>
                                 <img src={ManageMobileImg} alt="website screenshot"/>
                             </div>
-                            <div  className="single-project-block" onClick={projectClick('makeup')}  data-aos="fade-right">
+                            <div  className="single-project-block"  onClick={()=>projectClick('makeup')}  data-aos="fade-right">
                                 <div className="project-img-cover">
                                     <div className="project-img-opacity"></div>
                                     <div>
@@ -350,7 +350,7 @@ const Main = (props) => {
                                 </div>
                                 <img src={MakeupDesktopImg} alt="website screenshot" />
                             </div>
-                            <div  className="single-project-block" onClick={projectClick('ip')}  data-aos="fade-right">
+                            <div  className="single-project-block"  onClick={()=>projectClick('ip')} data-aos="fade-right">
                                 <div className="project-img-cover">
                                     <div className="project-img-opacity"></div>
                                     <div>
@@ -373,7 +373,7 @@ const Main = (props) => {
                             </div>
                         </div> 
                             <div className={showExtraProjects ? "extra-project-blocks grow-block" : 'extra-project-blocks'}>
-                                <div  className="single-project-block" onClick={projectClick('blue-orange')} >
+                                <div  className="single-project-block"  onClick={()=>projectClick('blue-orange')} >
                                     <div className="project-img-cover">
                                         <div className="project-img-opacity"></div>
                                         <div>
@@ -394,7 +394,7 @@ const Main = (props) => {
                                     </div>
                                     <img src={SunnyDesktopImg} alt="website screenshot"/>
                                 </div>
-                                <div  className="single-project-block" onClick={projectClick('portfolio')} >
+                                <div  className="single-project-block" onClick={()=>projectClick('portfolio')} >
                                     <div className="project-img-cover">
                                         <div className="project-img-opacity"></div>
                                         <div>
@@ -416,7 +416,7 @@ const Main = (props) => {
                                     <img src={PortfolioDesktopImg} alt="website screenshot"/>
                                 </div>
                             </div> 
-                        <button className="button square-button project-block-button" onClick={showMore}>{showExtraProjects ? data.projects.hideMore : data.projects.loadMore}</button>
+                        <button className="button square-button project-block-button" onClick={()=>showMore()}>{showExtraProjects ? data.projects.hideMore : data.projects.loadMore}</button>
                     </div>
                     <div className="light-square-block">
                         <div className="skills-block" id="skills">

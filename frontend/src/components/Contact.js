@@ -85,7 +85,6 @@ const Contact = (props) => {
     }
 
     const checkForm = () => {
-        console.log('hello')
         if(firstName === '' || lastName === '' || email === '' || service === '' || message === ''){
             setError(true)
         }else{
@@ -168,7 +167,7 @@ const Contact = (props) => {
                 </div>
             </div>
             <div className="form-button-container">
-                <button className={error ? "form-button2 opacity" : "form-button"} disabled={error ? true : false} onClick={submitEmail}>
+                <button className={error ? "form-button2 opacity" : "form-button"} disabled={error ? true : false} onClick={()=>submitEmail()}>
                     {loading ? 
                         <span>{data.contact.sending}</span> : <span>{data.contact.sendMessage}</span>
                     }

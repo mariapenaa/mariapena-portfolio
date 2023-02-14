@@ -20,7 +20,6 @@ const Header = (props) => {
 
     useEffect(() => {
         setHeight(ref.current.clientHeight)
-        console.log(height)
     })
     
 
