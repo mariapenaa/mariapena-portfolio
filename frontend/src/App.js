@@ -6,22 +6,25 @@ import usa from './images/flags/usa.png'
 import ReactGA from 'react-ga';
 import Main from './components/Main';
 
+const TRACKING_ID = "G-ELGJ0FNYFX"
+ReactGA.initialize(TRACKING_ID);
+
 function App() {
   const [language, setLanguage] = useState('english')
   const [display, setDisplay] = useState(true)
-  
+
+
   const toggleLanguage = (language) => {
     setLanguage(language)
     setDisplay(true)
   }
 
   const setGA = () => {
-    ReactGA.initialize('G-BVPP4E9SEJ');
-    ReactGA.pageview('Init page view');
+    ReactGA.pageview(window.location.pathname + window.location.search);
   };
 
   useEffect(() => {
-   setGA()
+    setGA()
   })
 
 
