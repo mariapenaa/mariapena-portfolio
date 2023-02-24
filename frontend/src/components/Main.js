@@ -12,7 +12,6 @@ import Circle from '../images/shapes/orange-circle.svg'
 import BlueRectangle from '../images/shapes/blue-rectangle.svg'
 import DoubleOrangeCircle from '../images/shapes/double-orange-circle.svg'
 
-import ManageDesktopImg from '../images/screenshots/manageImgDesktop.webp'
 import ComentDesktopImg from '../images/screenshots/commentImgDesktop.webp'
 import IpDesktopImg from '../images/screenshots/ipImgDesktop.webp'
 import MakeupDesktopImg from '../images/screenshots/makeupImgDesktop.webp'
@@ -54,7 +53,7 @@ function getWindowDimensions() {
 const Main = (props) => {
     AOS.init({
         // Global settings:
-        disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+        disable: 'mobile', // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
         startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
         initClassName: 'aos-init', // class applied after initialization
         animatedClassName: 'aos-animate', // class applied on animation

@@ -1,15 +1,7 @@
 
-import React, {useState, useEffect} from 'react';
-import { useTheme } from '@mui/material/styles';
-import Box from '@mui/material/Box';
-import MobileStepper from '@mui/material/MobileStepper';
-import Paper from '@mui/material/Paper';
-import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
+import React, {useState} from 'react';
 import KeyboardArrowLeft from '@mui/icons-material/KeyboardArrowLeft';
 import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
-import SwipeableViews from 'react-swipeable-views';
-import { autoPlay } from 'react-swipeable-views-utils';
 import StarIcon from '@mui/icons-material/Star';
 import OutlineStarIcon from '@mui/icons-material/StarOutline';
 import ProfileIcon from '@mui/icons-material/AccountCircle';
@@ -18,7 +10,6 @@ import '../../styles/carrousel.scss'
 
 import ReactGA from 'react-ga4';
 
-const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 const steps = [
     {
@@ -49,10 +40,9 @@ const steps = [
 ];
 
 const Carrousel = (props) => {
-    const theme = useTheme();
-    const [activeStep, setActiveStep] = React.useState(0);
-    const [slideAnimation, setSlideAnimation] = React.useState(false);
-    const [slideSide, setSlideSide] = React.useState('slide-in-right');
+    const [activeStep, setActiveStep] = useState(0);
+    const [slideAnimation, setSlideAnimation] = useState(false);
+    const [slideSide, setSlideSide] = useState('slide-in-right');
     const maxSteps = steps.length;
 
     const handleNext = () => {

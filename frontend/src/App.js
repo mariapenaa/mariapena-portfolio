@@ -11,7 +11,7 @@ ReactGA.initialize(TRACKING_ID);
 
 function App() {
   const [language, setLanguage] = useState('english')
-  const [display, setDisplay] = useState(true)
+  const [display, setDisplay] = useState(false)
 
 
   const toggleLanguage = (language) => {

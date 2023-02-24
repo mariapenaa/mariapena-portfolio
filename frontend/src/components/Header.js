@@ -1,7 +1,6 @@
 
 import React , { useState , useEffect, useRef} from 'react';
 import '../styles/main.scss'
-import LinearProgress from '@material-ui/core/LinearProgress';
 import MenuIcon from '@mui/icons-material/Menu'
 import Collapse from '@mui/material/Collapse';
 

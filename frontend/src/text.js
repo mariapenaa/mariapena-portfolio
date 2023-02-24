@@ -180,7 +180,7 @@ export  const text = [
             me:'mi',
             title1:'Soy Maria',
             title2: 'Te puedo dar una identidad digital reconocible',
-            text:'Trabajo cada día para crecer tanto como desarrolladora como profesional. Tengo conocimiento de primer nivel tanto de Backend como Frontend. Mi prioridad número uno es siepre la satisfacción de mis clientes, y es por esto que trabajo con dedicación y motivación para entregar páginas responsive de alta calidad y alto nivel estético, con un código optimizado, accesible y veloz. Nunca considero que un trabajo está terminado hasta que el proyecto exceda las expectativas de mi cliente'
+            text:'Trabajo cada día para crecer tanto como desarrolladora como profesional. Tengo conocimiento de primer nivel tanto de Backend como Frontend. Mi prioridad número uno es siempre la satisfacción de mis clientes, y es por esto que trabajo con dedicación y motivación para entregar páginas responsive de alta calidad y alto nivel estético, con un código optimizado, accesible y veloz. Nunca considero que un trabajo está terminado hasta que el proyecto exceda las expectativas de mi cliente.'
         },
         projects: {
             title1: 'mis increíbles',

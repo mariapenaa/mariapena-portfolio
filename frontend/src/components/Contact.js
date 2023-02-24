@@ -1,10 +1,8 @@
 
-import React, {useState, useEffect} from 'react';
-import CircularProgress from '@mui/material/CircularProgress';
+import React, {useState} from 'react';
 import axios from 'axios'
 import Alert from '@mui/material/Alert';
 import AlertTitle from '@mui/material/AlertTitle';
-import Stack from '@mui/material/Stack';
 import Collapse from '@mui/material/Collapse';
 
 import '../styles/main.scss'
@@ -13,7 +11,6 @@ import ReactGA from 'react-ga4';
 
 const Contact = (props) => {
     const {data} = props;
-    const [open, setOpen] = useState(false);
     const [message, setMessage] = useState('');
     const [success, setSuccess] = useState(null);
     const [loading, setLoading] = useState(false);
@@ -22,7 +19,6 @@ const Contact = (props) => {
     const [phone, setPhone] = useState('')
     const [service, setService] = useState('')
     const [openAlert, setOpenAlert] = useState(false)
-    const [content, setContent] = useState('')
     const [lastName, setLastName] = useState('')
     const [error, setError] = useState(true)
 
